@@ -1,0 +1,45 @@
+name: Fix Centro Pro Mujer coordinates
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update coordinates
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          old = '"id":"2083","tipo":"imagen","cadena":"CENTRO GINECOLOGICO PRO MUJER","nombre":"CENTRO GINECOLOGICO PRO MUJER","departamento":"La Unión","municipio":"La Unión Norte","direccion":"Hospital El Angel Local 2, Primer Nivel, Santa Rosa De Lima, La Unión","lat":13.3733,"lng":-87.5328'
+          new = '"id":"2083","tipo":"imagen","cadena":"CENTRO GINECOLOGICO PRO MUJER","nombre":"CENTRO GINECOLOGICO PRO MUJER","departamento":"La Unión","municipio":"La Unión Norte","direccion":"Hospital El Angel Local 2, Primer Nivel, Santa Rosa De Lima, La Unión","lat":13.62722815943338,"lng":-87.89166386614166'
+
+          if text.count(old) != 1:
+              raise SystemExit(f'Coincidencias inesperadas: {text.count(old)}')
+
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+      - name: Commit and remove workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git rm -f .github/workflows/fix-pro-mujer.yml
+          if git diff --cached --quiet; then
+            echo "No hay cambios que guardar."
+            exit 0
+          fi
+          git commit -m "Update Centro Pro Mujer coordinates"
+          git push
