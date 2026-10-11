@@ -1105,10 +1105,323 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 
 </style>
 
-</head>
-<body class="dark-mode">
+<style id="sv-visual-compact-20261011">
+/* Preview only. Original data and behavior are preserved. Every rule is scoped
+   to the official map; changing tabs restores the original development UI. */
+body[data-visual-map="oficial"] {
+  --topbar-h: 72px;
+  --sidebar-w: 320px;
+  --panel-w: 420px;
+  --sv-paper: #fff;
+  --sv-soft: #f3f6f9;
+  --sv-ink: #172c43;
+  --sv-muted: #526479;
+  --sv-line: #d5dfe8;
+  --sv-accent: #08796f;
+  --sv-focus: #26b9a7;
+  --sv-shadow: 0 8px 28px rgba(12, 32, 54, .16);
+}
+body[data-visual-map="oficial"].dark-mode {
+  --sv-paper: #142133;
+  --sv-soft: #1c2c40;
+  --sv-ink: #edf3f9;
+  --sv-muted: #b0bfd1;
+  --sv-line: #35485f;
+  --sv-accent: #75d9cb;
+  --sv-shadow: 0 8px 28px rgba(0, 0, 0, .32);
+}
+body[data-visual-map="oficial"] :is(#app, .mapas-nav, #svGuia) { color: var(--sv-ink); }
+body[data-visual-map="oficial"] :is(#app, .modal-especiales, .modal-fase2) { --text-faint: var(--sv-muted); --text-muted: var(--sv-muted); }
+body[data-visual-map="oficial"] :is(.topbar-popover, .modal-especiales, .modal-fase2) input::placeholder { color: var(--sv-muted); opacity: 1; }
+body[data-visual-map="oficial"].dark-mode :is(.resultado-sucursal__encabezado, .resultado-sucursal__coincide, .cadena-card__total, .cadena-card details summary, .estudio-total, .chip-servicio--resaltado) { color: var(--sv-accent); }
+body[data-visual-map="oficial"] :is(#app, .mapas-nav, #svGuia) ::selection { background: #b7e9e2; color: #0b3540; }
+body[data-visual-map="oficial"] :is(input, select) { caret-color: var(--sv-accent); }
+body[data-visual-map="oficial"] :is(#app, .mapas-nav, #svGuia) :is(button, input, select, summary, a):focus-visible {
+  outline: 3px solid var(--sv-focus); outline-offset: 3px;
+}
+body[data-visual-map="oficial"] :is(.sidebar, .panel-detalle__cuerpo, .topbar-popover) {
+  scrollbar-width: thin; scrollbar-color: var(--sv-muted) var(--sv-soft);
+}
+body[data-visual-map="oficial"] .mapas-nav {
+  height: 50px; min-height: 50px; padding: 0 20px; gap: 18px;
+  flex-wrap: nowrap; border-bottom: 1px solid var(--sv-line); background: var(--sv-paper);
+}
+body[data-visual-map="oficial"] .mapas-tabs { align-self: stretch; align-items: stretch; gap: 20px; width: auto; }
+body[data-visual-map="oficial"] .mapas-tabs button {
+  font-size: 13px; font-weight: 650; padding: 0 2px; border: 0; border-bottom: 3px solid transparent;
+  border-radius: 0; background: transparent; color: var(--sv-muted); text-decoration: none;
+}
+body[data-visual-map="oficial"] .mapas-tabs button[aria-selected="true"] { color: var(--sv-ink); border-bottom-color: var(--sv-accent); }
+body[data-visual-map="oficial"] #etiquetaMapa { font-size: 11px; font-weight: 500; letter-spacing: 0; color: var(--sv-muted); }
+#svAbrirGuia { display: none; }
+body[data-visual-map="oficial"] #svAbrirGuia {
+  display: inline-flex; align-items: center; justify-content: center; margin-left: auto;
+  min-height: 36px; padding: 6px 12px; font: inherit; font-size: 12px; font-weight: 650;
+  color: var(--sv-accent); background: transparent; border: 1px solid var(--sv-line); border-radius: 8px;
+}
+body[data-visual-map="oficial"] .topbar {
+  display: flex; flex-wrap: nowrap; height: var(--topbar-h); padding: 10px 20px; gap: 12px;
+  background: #102e4c; box-shadow: none; border-bottom: 1px solid #294761; align-items: center;
+}
+body[data-visual-map="oficial"] .topbar__marca { flex: 0 0 252px; min-width: 0; gap: 10px; }
+body[data-visual-map="oficial"] .topbar__marca-icono { width: 36px; height: 36px; border-radius: 10px; background: #0b8579; }
+body[data-visual-map="oficial"] .topbar__titulo { min-width: 0; }
+body[data-visual-map="oficial"] .topbar__titulo strong { font-size: 14px; font-weight: 650; line-height: 1.35; }
+body[data-visual-map="oficial"] .topbar__titulo span { display: block; font-size: 10.5px; color: #c6d7e8; margin-top: 3px; }
+body[data-visual-map="oficial"] .topbar__buscador {
+  order: 0; flex: 1 1 310px; min-width: 160px; max-width: none; height: 44px;
+  padding: 4px 4px 4px 12px; gap: 8px; border: 1px solid #d7e2ec; border-radius: 10px;
+  background: #fff; box-shadow: none;
+}
+body[data-visual-map="oficial"] .topbar__buscador > svg { color: #536a81; }
+body[data-visual-map="oficial"] .topbar__buscador > svg * { stroke: currentColor; }
+body[data-visual-map="oficial"] .topbar__buscador input { font-size: 13px; color: #172c43; min-width: 0; width: 0; }
+body[data-visual-map="oficial"] .topbar__buscador input::placeholder { color: #526479; opacity: 1; }
+body[data-visual-map="oficial"] .topbar__buscador button {
+  min-height: 34px; font-size: 12px; padding: 7px 10px; border-radius: 7px; background: #08796f; color: #fff;
+}
+body[data-visual-map="oficial"] .topbar__acciones {
+  order: 0; flex: 0 0 auto; width: auto; min-width: 0; gap: 6px; flex-wrap: nowrap;
+  margin-left: 0; overflow: visible; justify-content: flex-start;
+}
+body[data-visual-map="oficial"] .topbar .btn-icono {
+  min-width: 40px; width: auto; min-height: 40px; padding: 9px; gap: 6px;
+  font-size: 12px; font-weight: 600; border-radius: 8px; background: #1c3a58;
+  border-color: #4a6178; box-shadow: none; transition: background-color 150ms ease;
+}
+body[data-visual-map="oficial"] .topbar .btn-icono span { display: inline; max-width: none; white-space: nowrap; }
+body[data-visual-map="oficial"] .topbar .btn-icono.activo { background: #106d65; border-color: #72bdb4; }
+body[data-visual-map="oficial"] #badgeTotal {
+  display: block; flex: 0 0 175px; width: 175px; max-width: none; min-height: 40px; margin: 0 0 0 4px;
+  padding: 6px 0 6px 12px; border: 0; border-left: 1px solid #536b81; border-radius: 0;
+  background: transparent; color: #edf4fa; font-size: 11px; line-height: 1.5; font-weight: 550;
+  white-space: normal; text-transform: none; letter-spacing: 0; font-variant-numeric: tabular-nums;
+}
+body[data-visual-map="oficial"] .sidebar { padding: 20px 18px 28px; gap: 20px; background: var(--sv-paper); border-color: var(--sv-line); }
+body[data-visual-map="oficial"] .sidebar__seccion { margin-bottom: 0; gap: 8px; }
+body[data-visual-map="oficial"] .sidebar__titulo {
+  font-size: 13px; font-weight: 700; text-transform: none; letter-spacing: 0; margin-bottom: 2px; color: var(--sv-ink);
+}
+body[data-visual-map="oficial"] .sidebar__select {
+  font-size: 13px; height: 42px; border-radius: 8px; background-color: var(--sv-paper);
+  color: var(--sv-ink); border-color: var(--sv-line); margin-bottom: 0;
+}
+body[data-visual-map="oficial"] .sidebar__select::placeholder { color: var(--sv-muted); opacity: 1; }
+body[data-visual-map="oficial"] :is(.sidebar__ayuda, .sidebar__nota) { font-size: 12px; line-height: 1.5; color: var(--sv-muted); }
+body[data-visual-map="oficial"] .link-mini { font-size: 12px; font-weight: 600; color: var(--sv-accent); text-underline-offset: 3px; }
+body[data-visual-map="oficial"] .widget-bienvenida { padding: 0; border: 0; box-shadow: none; background: transparent; }
+body[data-visual-map="oficial"] .widget-bienvenida__cab { gap: 10px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--sv-line); }
+body[data-visual-map="oficial"] .widget-bienvenida__saludo { font-size: 14px; font-weight: 650; line-height: 1.45; color: var(--sv-ink); }
+body[data-visual-map="oficial"] .widget-bienvenida__contador {
+  padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--sv-accent);
+  font-size: 12px; line-height: 1.5; font-weight: 650; font-variant-numeric: tabular-nums;
+}
+body[data-visual-map="oficial"] .widget-tipo-fila {
+  min-height: 46px; padding: 10px; gap: 10px; border-radius: 9px; box-shadow: none; transform: none;
+  transition: none; border-color: var(--sv-line); background: var(--sv-paper);
+}
+body[data-visual-map="oficial"] .widget-tipo-fila.activo { background: color-mix(in srgb, var(--acceso-color) 7%, var(--sv-paper)); border-color: color-mix(in srgb, var(--acceso-color) 45%, var(--sv-line)); }
+body[data-visual-map="oficial"] .widget-tipo-fila:not(.activo) { opacity: 1; background: var(--sv-soft); }
+body[data-visual-map="oficial"] .widget-tipo-fila input { position: static; width: 16px; height: 16px; opacity: 1; pointer-events: auto; order: 4; accent-color: var(--sv-accent); }
+body[data-visual-map="oficial"] .widget-tipo-fila:has(input:focus-visible) { outline: 3px solid var(--sv-focus); outline-offset: 3px; }
+body[data-visual-map="oficial"] .widget-tipo-fila__icono { width: 28px; height: 28px; border-radius: 7px; }
+body[data-visual-map="oficial"] .widget-tipo-fila__texto { font-size: 13px; font-weight: 650; color: var(--sv-ink); }
+body[data-visual-map="oficial"] :is(.widget-tipo-fila__num, .filtro-sub__num) { font-size: 12px; font-weight: 600; color: var(--sv-muted); font-variant-numeric: tabular-nums; }
+body[data-visual-map="oficial"] .filtro-tipo__sub { padding-left: 10px; margin: 7px 0 12px; }
+body[data-visual-map="oficial"] .filtro-sub { font-size: 12px; padding: 7px 6px; min-height: 32px; gap: 8px; color: var(--sv-muted); }
+body[data-visual-map="oficial"] .filtro-sub span:not(.filtro-sub__num) { line-height: 1.4; }
+body[data-visual-map="oficial"] .filtro-sub input { width: 15px; height: 15px; accent-color: var(--sv-accent); }
+body[data-visual-map="oficial"] .filtro-sub:has(input:checked) span:not(.filtro-sub__num) { color: var(--sv-accent); }
+body[data-visual-map="oficial"] :is(.resultados-buscar-sucursal, .topbar-popover, .panel-detalle, .leaflet-popup-content-wrapper) { background: var(--sv-paper); color: var(--sv-ink); }
+body[data-visual-map="oficial"] .topbar-popover { border-radius: 12px; box-shadow: var(--sv-shadow); --teal-600: var(--sv-accent); }
+body[data-visual-map="oficial"] .topbar-popover :is(.cadena-card__codigo, .cadena-card__tag, .cadena-card__total, .topbar-popover__nota, .estudio-fila__num) { font-size: 11px; }
+body[data-visual-map="oficial"] .panel-detalle { box-shadow: var(--sv-shadow); transition: transform 180ms cubic-bezier(.2,.8,.2,1); }
+body[data-visual-map="oficial"] .panel-detalle__cab { padding: 20px; gap: 10px; flex-wrap: wrap; }
+body[data-visual-map="oficial"] .panel-detalle__cab-texto { order: 3; flex-basis: 100%; }
+body[data-visual-map="oficial"] .panel-detalle__cerrar { width: 36px; height: 36px; margin-left: auto; border-radius: 8px; background: var(--sv-soft); color: var(--sv-muted); }
+body[data-visual-map="oficial"] .panel-detalle__nombre { font-size: 19px; font-weight: 700; color: var(--sv-ink); line-height: 1.4; }
+body[data-visual-map="oficial"] .panel-detalle__cadena { font-size: 13px; color: var(--sv-muted); }
+body[data-visual-map="oficial"] .panel-detalle__cuerpo { padding: 20px 20px 32px; gap: 22px; }
+body[data-visual-map="oficial"] :is(.dato-fila div b, .tabla-medicamentos th, .panel-detalle__estado-fuente, .panel-detalle__proveedor) { color: var(--sv-muted); }
+body[data-visual-map="oficial"] .subseccion h4 { font-size: 13px; letter-spacing: 0; text-transform: none; color: var(--sv-ink); }
+body[data-visual-map="oficial"] .chip-servicio { color: var(--sv-ink); background: var(--sv-soft); border-color: var(--sv-line); }
+body[data-visual-map="oficial"] .chip-servicio--resaltado { color: var(--sv-accent); }
+body[data-visual-map="oficial"] .pista-inicial { display: none; } /* Its task guidance is available in the replayable guide. */
+#svGuia { display: none; }
+body[data-visual-map="oficial"] #svGuia:not([hidden]) {
+  display: block; position: absolute; top: 18px; left: 58px; width: 340px; max-width: calc(100% - 82px);
+  padding: 22px; border: 0; border-radius: 14px; background: var(--sv-paper);
+  box-shadow: var(--sv-shadow); z-index: 800;
+}
+body[data-visual-map="oficial"] .sv-guia__cab { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+body[data-visual-map="oficial"] #svGuia h2 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; letter-spacing: -.02em; flex: 1; }
+body[data-visual-map="oficial"] #svCerrarGuia { width: 32px; height: 32px; flex: 0 0 32px; border: 0; border-radius: 7px; background: var(--sv-soft); color: var(--sv-muted); font-size: 22px; line-height: 1; }
+body[data-visual-map="oficial"] #svGuia p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--sv-muted); }
+body[data-visual-map="oficial"] #svGuia ul { list-style: disc; padding-left: 18px; margin: 14px 0 18px; }
+body[data-visual-map="oficial"] #svGuia li { padding-left: 2px; margin: 7px 0; font-size: 13px; line-height: 1.5; }
+body[data-visual-map="oficial"] .sv-guia__acciones { display: flex; align-items: center; gap: 12px; }
+body[data-visual-map="oficial"] .sv-guia__acciones button { min-height: 40px; padding: 9px 12px; font: inherit; font-size: 12px; font-weight: 650; border-radius: 8px; }
+body[data-visual-map="oficial"] #svBuscarCentro { background: #08796f; color: #fff; border: 0; }
+body[data-visual-map="oficial"] #svEntendido { background: transparent; border: 0; color: var(--sv-accent); }
+@media (hover: hover) and (pointer: fine) {
+  body[data-visual-map="oficial"] .topbar .btn-icono:hover { background: #2b4a68; }
+  body[data-visual-map="oficial"] :is(#svAbrirGuia, #svEntendido):hover { background: var(--sv-soft); }
+  body[data-visual-map="oficial"] .mapas-tabs button:hover { color: var(--sv-ink); }
+  body[data-visual-map="oficial"] :is(.topbar button, #svGuia button):active:not(:focus-visible) { transform: scale(.98); }
+}
+@media (max-width: 1600px) and (min-width: 901px) {
+  body[data-visual-map="oficial"] .topbar { padding: 10px 14px; gap: 10px; }
+  body[data-visual-map="oficial"] .topbar__marca { flex-basis: 228px; }
+  body[data-visual-map="oficial"] .topbar__titulo span { display: none; }
+  body[data-visual-map="oficial"] :is(#btnGeolocalizar, #btnModoOscuro) span { display: none; }
+}
+@media (max-width: 1280px) and (min-width: 901px) {
+  body[data-visual-map="oficial"] #btnServiciosEspeciales span { display: none; }
+  body[data-visual-map="oficial"] .topbar__marca { flex-basis: 208px; }
+  body[data-visual-map="oficial"] #badgeTotal { flex-basis: 166px; width: 166px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  body[data-visual-map="oficial"] :is(#btnCadenas, #btnEstudiosServicios) span { display: none; }
+}
+@media (max-width: 900px) {
+  body[data-visual-map="oficial"] { --topbar-h: 112px; }
+  body[data-visual-map="oficial"] .mapas-nav { padding: 0 12px; gap: 12px; }
+  body[data-visual-map="oficial"] #etiquetaMapa { display: none; }
+  body[data-visual-map="oficial"] .topbar {
+    display: grid; grid-template-columns: 40px minmax(0,1fr) auto; grid-template-rows: 40px 42px;
+    height: var(--topbar-h); padding: 10px 12px; gap: 8px;
+  }
+  body[data-visual-map="oficial"] .btn-hamburguesa { display: flex; min-width: 40px; height: 40px; }
+  body[data-visual-map="oficial"] .topbar__marca { grid-column: 2; grid-row: 1; min-width: 0; }
+  body[data-visual-map="oficial"] .topbar__marca-icono { display: none; }
+  body[data-visual-map="oficial"] .topbar__titulo strong { font-size: 13px; }
+  body[data-visual-map="oficial"] .topbar__titulo span { display: none; }
+  body[data-visual-map="oficial"] .topbar__buscador { grid-column: 1/-1; grid-row: 2; width: 100%; min-width: 0; height: 42px; }
+  body[data-visual-map="oficial"] .topbar__acciones { grid-column: 3; grid-row: 1; gap: 4px; }
+  body[data-visual-map="oficial"] .topbar .btn-icono span { display: none; }
+  body[data-visual-map="oficial"] #badgeTotal { width: 142px; flex-basis: 142px; font-size: 11px; padding-left: 8px; margin: 0; }
+  body[data-visual-map="oficial"] :is(.sidebar, .overlay-movil) { top: calc(var(--topbar-h) + 50px); }
+  body[data-visual-map="oficial"] .sidebar { width: min(86%, 340px); }
+  body[data-visual-map="oficial"] .topbar-popover { top: calc(var(--topbar-h) + 58px); max-height: calc(100dvh - var(--topbar-h) - 72px); }
+  body[data-visual-map="oficial"] .panel-detalle { height: 80dvh; }
+}
+@media (max-width: 600px) {
+  body[data-visual-map="oficial"] { --topbar-h: 144px; }
+  body[data-visual-map="oficial"] .mapas-nav { gap: 8px; padding: 0 10px; }
+  body[data-visual-map="oficial"] .mapas-tabs { gap: 12px; }
+  body[data-visual-map="oficial"] .mapas-tabs button { font-size: 11.5px; padding: 0; }
+  body[data-visual-map="oficial"] #svAbrirGuia { min-height: 36px; padding: 6px 9px; font-size: 11.5px; }
+  body[data-visual-map="oficial"] .topbar {
+    grid-template-columns: 40px minmax(0,1fr); grid-template-rows: 34px 42px 44px;
+    padding: 6px 10px; gap: 6px;
+  }
+  body[data-visual-map="oficial"] .topbar__titulo strong { font-size: 13px; }
+  body[data-visual-map="oficial"] .btn-hamburguesa { height: 34px; min-height: 34px; }
+  body[data-visual-map="oficial"] .topbar__acciones { grid-column: 1/-1; grid-row: 3; justify-content: space-between; gap: 3px; }
+  body[data-visual-map="oficial"] .topbar .btn-icono { width: 42px; min-width: 42px; height: 44px; padding: 10px; }
+  body[data-visual-map="oficial"] #badgeTotal { width: 142px; flex-basis: 142px; font-size: 11px; line-height: 1.5; }
+  body[data-visual-map="oficial"] .topbar__buscador input { font-size: 16px; }
+  body[data-visual-map="oficial"] .sidebar__select { font-size: 16px; }
+  body[data-visual-map="oficial"] #svGuia:not([hidden]) { top: 12px; left: 54px; max-width: calc(100% - 66px); padding: 18px; }
+  body[data-visual-map="oficial"] #svGuia h2 { font-size: 18px; }
+  body[data-visual-map="oficial"] .panel-detalle__cab { padding: 16px 18px; }
+  body[data-visual-map="oficial"] .panel-detalle__cuerpo { padding: 18px; }
+  body[data-visual-map="oficial"] #svCerrarGuia { width: 36px; height: 36px; flex-basis: 36px; }
+}
+@media (max-width: 360px) {
+  body[data-visual-map="oficial"] { --topbar-h: 154px; }
+  body[data-visual-map="oficial"] .topbar { padding-left: 8px; padding-right: 8px; grid-template-rows: 34px 42px 54px; }
+  body[data-visual-map="oficial"] .topbar .btn-icono { min-width: 34px; width: 34px; padding: 8px; }
+  body[data-visual-map="oficial"] #badgeTotal { width: 114px; flex-basis: 114px; font-size: 11px; }
+  body[data-visual-map="oficial"] .mapas-tabs { gap: 10px; }
+  body[data-visual-map="oficial"] .mapas-tabs button { font-size: 11px; }
+  body[data-visual-map="oficial"] #svAbrirGuia { padding: 6px; }
+  body[data-visual-map="oficial"] .sv-guia__acciones { flex-wrap: wrap; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-visual-map="oficial"] :is(.panel-detalle, .sidebar, .btn-icono, .widget-tipo-fila) { transition: none; }
+  body[data-visual-map="oficial"] :is(.topbar button, #svGuia button):active { transform: none; }
+}
 
-<nav class="mapas-nav" aria-label="Seleccionar mapa"><div class="mapas-tabs" role="tablist" aria-label="Mapas"><button type="button" role="tab" id="tabOficial" aria-controls="mapa" aria-selected="true">Red Doctor SV</button><button type="button" role="tab" id="tabDemo" aria-controls="mapaDemo" aria-selected="false">Proyecto en desarrollo</button></div><span id="etiquetaMapa">MAPA OFICIAL · Red Doctor SV</span></nav>
+/* Approved combination: compact filters + clearer details. Official map only. */
+body[data-visual-map="oficial"] :is(#btnCadenas, #btnEstudiosServicios, #btnServiciosEspeciales, #btnGeolocalizar, #btnModoOscuro) span { display: inline; }
+body[data-visual-map="oficial"] .topbar__marca { flex-basis: 220px; }
+body[data-visual-map="oficial"] .topbar__titulo span { display: none; }
+body[data-visual-map="oficial"] .topbar__buscador { min-width: 160px; }
+body[data-visual-map="oficial"] .sidebar { padding: 14px 16px 26px; gap: 14px; }
+body[data-visual-map="oficial"] .sidebar__seccion { gap: 6px; }
+body[data-visual-map="oficial"] .sidebar__select { height: 38px; }
+.sv-summary, .sv-type-heading, .sv-type-options { display: none; }
+body[data-visual-map="oficial"] .sv-summary { display: block; padding-bottom: 12px; border-bottom: 1px solid var(--sv-line); }
+body[data-visual-map="oficial"] .sv-summary h2 { margin: 0 0 4px; font-size: 13px; line-height: 1.4; font-weight: 700; color: var(--sv-ink); }
+body[data-visual-map="oficial"] .sv-summary #badgeTotal {
+  display: block; width: auto; max-width: none; min-height: 0; padding: 0; margin: 0; border: 0;
+  background: transparent; color: var(--sv-muted); font-size: 12px; line-height: 1.6;
+  font-weight: 500; white-space: normal; font-variant-numeric: tabular-nums;
+}
+body[data-visual-map="oficial"] .widget-bienvenida__cab { display: none; }
+body[data-visual-map="oficial"] .sv-type-heading { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--sv-ink); }
+body[data-visual-map="oficial"] .widget-bienvenida__tipos { gap: 4px; }
+body[data-visual-map="oficial"] .sv-compact-type {
+  display: grid; grid-template-columns: minmax(0,1fr) 36px; gap: 4px 4px; align-items: center;
+  border-bottom: 1px solid var(--sv-line); padding-bottom: 2px;
+}
+body[data-visual-map="oficial"] .sv-compact-type .widget-tipo-fila {
+  grid-column: 1; grid-row: 1; min-height: 42px; padding: 6px 0; gap: 8px; border: 0;
+  border-radius: 0; background: transparent;
+}
+body[data-visual-map="oficial"] .sv-compact-type .widget-tipo-fila:not(.activo) { background: transparent; }
+body[data-visual-map="oficial"] .sv-compact-type .widget-tipo-fila input { order: 0; flex: none; }
+body[data-visual-map="oficial"] .sv-compact-type .widget-tipo-fila__icono { width: 24px; height: 24px; border-radius: 6px; }
+body[data-visual-map="oficial"] .sv-compact-type .widget-tipo-fila__texto { font-size: 12.5px; font-weight: 600; }
+body[data-visual-map="oficial"] .sv-type-options {
+  display: flex; grid-column: 2; grid-row: 1; align-items: center; justify-content: center;
+  min-width: 36px; width: 36px; min-height: 40px; padding: 8px; border: 0; border-radius: 7px;
+  background: var(--sv-soft); color: var(--sv-muted);
+}
+body[data-visual-map="oficial"] .sv-type-options svg { width: 16px; height: 16px; }
+body[data-visual-map="oficial"] .sv-type-options[aria-expanded="true"] svg { transform: rotate(180deg); }
+body[data-visual-map="oficial"] .sv-type-options.has-active { color: var(--sv-accent); outline: 1px solid var(--sv-accent); outline-offset: -1px; }
+body[data-visual-map="oficial"] .sv-compact-type .filtro-tipo__sub { grid-column: 1/-1; margin: 0 0 6px 10px; padding-left: 10px; }
+body[data-visual-map="oficial"] .sv-compact-type:not(.sv-expanded) .filtro-tipo__sub { display: none; }
+body[data-visual-map="oficial"] .panel-detalle__cab { padding: 20px; background: var(--sv-paper); }
+body[data-visual-map="oficial"] .panel-detalle__tipo-chip { font-size: 10.5px; font-weight: 650; letter-spacing: 0; text-transform: none; border-radius: 6px; padding: 5px 9px; }
+body[data-visual-map="oficial"] .panel-detalle__nombre { font-size: 18px; font-weight: 700; line-height: 1.45; }
+body[data-visual-map="oficial"] .panel-detalle__cadena { font-size: 12px; line-height: 1.5; margin-top: 6px; }
+body[data-visual-map="oficial"] .panel-detalle__cuerpo { gap: 22px; padding-top: 22px; }
+body[data-visual-map="oficial"] .dato-fila { font-size: 13px; line-height: 1.65; gap: 12px; }
+body[data-visual-map="oficial"] .dato-fila div b { font-size: 11px; letter-spacing: .02em; margin-bottom: 5px; }
+body[data-visual-map="oficial"] .panel-detalle .aviso-sin-origen { margin-top: 8px; font-size: 12px; line-height: 1.5; }
+body[data-visual-map="oficial"] .panel-detalle .btn-primario { border-radius: 9px; min-height: 44px; }
+body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia) { border-top: 1px solid var(--sv-line); padding-top: 18px; }
+@media (hover: hover) and (pointer: fine) {
+  body[data-visual-map="oficial"] .sv-type-options:hover { color: var(--sv-accent); }
+}
+@media (max-width: 1150px) and (min-width: 901px) {
+  body[data-visual-map="oficial"] .topbar__marca { flex-basis: 194px; }
+  body[data-visual-map="oficial"] .topbar .btn-icono { padding: 8px; font-size: 11.5px; }
+  body[data-visual-map="oficial"] :is(#btnGeolocalizar, #btnModoOscuro, #btnServiciosEspeciales) span { display: none; }
+}
+@media (max-width: 900px) {
+  body[data-visual-map="oficial"] :is(#btnCadenas, #btnEstudiosServicios, #btnServiciosEspeciales, #btnGeolocalizar, #btnModoOscuro) span { display: none; }
+  body[data-visual-map="oficial"] .sidebar__select { height: 42px; }
+  body[data-visual-map="oficial"] .sv-type-options { min-height: 44px; }
+}
+@media (max-width: 600px) {
+  body[data-visual-map="oficial"] { --topbar-h: 144px; }
+  body[data-visual-map="oficial"] .topbar { grid-template-rows: 34px 42px 44px; }
+  body[data-visual-map="oficial"] .topbar__acciones { justify-content: space-evenly; }
+  body[data-visual-map="oficial"] .topbar .btn-icono { min-width: 44px; width: 44px; }
+  body[data-visual-map="oficial"] .panel-detalle__cab { padding: 18px; }
+  body[data-visual-map="oficial"] .panel-detalle__cuerpo { padding: 18px; }
+  body[data-visual-map="oficial"] .sidebar { padding-top: 16px; }
+}
+
+</style>
+</head>
+<body class="dark-mode" data-visual-map="oficial">
+
+<nav class="mapas-nav" aria-label="Seleccionar mapa"><div class="mapas-tabs" role="tablist" aria-label="Mapas"><button type="button" role="tab" id="tabOficial" aria-controls="mapa" aria-selected="true">Red Doctor SV</button><button type="button" role="tab" id="tabDemo" aria-controls="mapaDemo" aria-selected="false">Proyecto en desarrollo</button></div><span id="etiquetaMapa">MAPA OFICIAL · Red Doctor SV</span><button id="svAbrirGuia" type="button" aria-controls="svGuia" aria-label="Cómo usar el mapa">Guía</button></nav>
 <div id="avisoDemo" hidden>PROYECTO EN DESARROLLO — DATOS DE DEMOSTRACIÓN — NO UTILIZAR PARA DERIVAR PACIENTES</div>
 <dialog id="accesoDemo" aria-labelledby="tituloAcceso" aria-describedby="notaAcceso"><form id="formAcceso"><h2 id="tituloAcceso">Proyecto en desarrollo</h2><p id="notaAcceso">Ingresa la contraseña para abrir los ejemplos DEMO. Son datos de demostración; no utilizar para derivar pacientes.</p><label for="claveDemo">Contraseña</label><input id="claveDemo" type="password" required autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="errorClave"><p id="errorClave" role="alert" aria-live="polite"></p><div class="acceso-acciones"><button id="cancelarAcceso" type="button">Cancelar</button><button type="submit">Ingresar</button></div></form></dialog>
 <div id="app">
@@ -1243,6 +1556,23 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 
   <!-- ============================== MAPA ============================== -->
   <div class="mapa-wrap">
+<section id="svGuia" aria-labelledby="svGuiaTitulo" hidden>
+  <div class="sv-guia__cab">
+    <h2 id="svGuiaTitulo">Encuentra el centro que necesitas</h2>
+    <button id="svCerrarGuia" type="button" aria-label="Cerrar guía">×</button>
+  </div>
+  <p>Consulta la red Doctor SV con los filtros y las fichas de cada centro.</p>
+  <ul>
+    <li>Filtra por departamento, municipio y distrito, o busca una sucursal.</li>
+    <li>Elige farmacia, laboratorio, imagen o atención presencial.</li>
+    <li>Abre un marcador para consultar su dirección, servicios y ruta. Si hay varios centros, elige la ficha que necesitas.</li>
+  </ul>
+  <div class="sv-guia__acciones">
+    <button id="svBuscarCentro" type="button">Buscar un centro</button>
+    <button id="svEntendido" type="button">Entendido</button>
+  </div>
+</section>
+
     <div id="mapa" role="tabpanel" aria-labelledby="tabOficial"></div><div id="mapaDemo" role="tabpanel" aria-labelledby="tabDemo" hidden></div><div id="avisoMapaBase" class="aviso-mapa-base" hidden>No se pudieron cargar las calles. Revisa la conexión a internet y vuelve a abrir el mapa.</div>
 
     <div class="pista-inicial" id="pistaInicial">
@@ -3626,5 +3956,139 @@ actualizarContadores();
 // desde una API o Google Sheets publicada como JSON, reemplaza las
 // asignaciones "let SUCURSALES = ..." de la sección 1 por un fetch()
 // asíncrono y vuelve a llamar inicializarConDatos() cuando responda.
+</script>
+<script id="sv-visual-guide-20261011">
+/* Isolated presentation layer. Never modifies center data, filters or demo access. */
+(() => {
+  const key = 'doctorsv.visualHelpSeen.v1';
+  const tab = document.getElementById('tabOficial');
+  const guide = document.getElementById('svGuia');
+  const open = document.getElementById('svAbrirGuia');
+  let returningFocus = false;
+  const official = () => tab.getAttribute('aria-selected') === 'true';
+  const remember = () => { try { localStorage.setItem(key, '1'); } catch (_) {} };
+  function closeGuide(focus = false) {
+    guide.hidden = true;
+    remember();
+    if (focus && official()) open.focus();
+  }
+  function showGuide(replay = false) {
+    if (!official()) return;
+    guide.hidden = false;
+    returningFocus = replay;
+    if (replay) document.getElementById('svCerrarGuia').focus();
+  }
+  function syncView() {
+    document.body.dataset.visualMap = official() ? 'oficial' : 'demo';
+    if (!official()) guide.hidden = true;
+    requestAnimationFrame(() => {
+      if (official() && typeof mapa !== 'undefined') mapa.invalidateSize({pan: false});
+    });
+  }
+  new MutationObserver(syncView).observe(tab, {attributes: true, attributeFilter: ['aria-selected']});
+  open.addEventListener('click', () => showGuide(true));
+  document.getElementById('svCerrarGuia').addEventListener('click', () => closeGuide(returningFocus));
+  document.getElementById('svEntendido').addEventListener('click', () => closeGuide(returningFocus));
+  document.getElementById('svBuscarCentro').addEventListener('click', () => {
+    closeGuide(false);
+    const sidebar = document.getElementById('sidebar');
+    if (matchMedia('(max-width: 900px)').matches && !sidebar.classList.contains('abierto')) {
+      document.getElementById('btnHamburguesa').click();
+    }
+    document.getElementById('inputBuscarSucursal').focus();
+  });
+  guide.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { event.stopPropagation(); closeGuide(true); }
+  });
+  /* Accessible names survive the existing map's filter-node cloning. */
+  for (const [id, label] of Object.entries({
+    selectDepartamento: 'Filtrar por departamento', selectMunicipio: 'Filtrar por municipio',
+    selectDistrito: 'Filtrar por distrito', inputBuscarDistrito: 'Buscar un distrito',
+    inputBuscarSucursal: 'Buscar sucursal, cadena, estudio o medicamento',
+    inputBuscador: 'Buscar dirección, municipio o departamento'
+  })) document.getElementById(id)?.setAttribute('aria-label', label);
+  syncView();
+  /* The map opens directly; help is available only on request. */
+})();
+
+/* Presentation only. Original controls, data and filter callbacks stay intact. */
+(() => {
+  const officialTab = document.getElementById('tabOficial');
+  const sidebar = document.getElementById('sidebar');
+  const badge = document.getElementById('badgeTotal');
+  const badgeHome = badge.parentElement;
+  const badgeNext = badge.nextSibling;
+  const widget = document.getElementById('widgetBienvenida');
+  const types = document.getElementById('widgetTiposEstablecimiento');
+  const expanded = new Set();
+  const isOfficial = () => officialTab.getAttribute('aria-selected') === 'true';
+  const summary = document.createElement('section');
+  summary.className = 'sv-summary';
+  summary.setAttribute('aria-labelledby', 'svResumenTitulo');
+  const title = document.createElement('h2');
+  title.id = 'svResumenTitulo';
+  title.textContent = 'Centros en esta consulta';
+  summary.append(title);
+  sidebar.prepend(summary);
+  const typeTitle = document.createElement('h2');
+  typeTitle.className = 'sv-type-heading';
+  typeTitle.textContent = 'Tipo de centro';
+  widget.insertBefore(typeTitle, types);
+  function decorateTypes() {
+    for (const group of types.querySelectorAll('.filtro-tipo-grupo')) {
+      const row = group.querySelector('.widget-tipo-fila');
+      const type = row.dataset.tipo;
+      if (!isOfficial()) {
+        group.querySelector('.sv-type-options')?.remove();
+        group.classList.remove('sv-compact-type', 'sv-expanded');
+        continue;
+      }
+      group.classList.add('sv-compact-type');
+      let button = group.querySelector('.sv-type-options');
+      if (!button) {
+        button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'sv-type-options';
+        button.dataset.svType = type;
+        button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        group.insertBefore(button, row.nextSibling);
+        button.addEventListener('click', () => {
+          if (expanded.has(type)) expanded.delete(type); else expanded.add(type);
+          updateGroup(group, type, button);
+        });
+      }
+      updateGroup(group, type, button);
+    }
+  }
+  function updateGroup(group, type, button) {
+    const open = expanded.has(type);
+    const label = group.querySelector('.widget-tipo-fila__texto').textContent;
+    const active = group.querySelectorAll('.filtro-tipo__sub input:checked').length;
+    const panels = group.querySelectorAll('.filtro-tipo__sub');
+    const ids = [];
+    panels.forEach((panel, index) => {
+      panel.id = 'svOpciones-' + type + '-' + index;
+      ids.push(panel.id);
+    });
+    group.classList.toggle('sv-expanded', open);
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-controls', ids.join(' '));
+    button.setAttribute('aria-label', (open ? 'Ocultar' : 'Mostrar') + ' opciones de ' + label + (active ? '. ' + active + ' filtros adicionales activos' : ''));
+    button.title = (open ? 'Ocultar' : 'Mostrar') + ' servicios y estado de ' + label;
+    button.classList.toggle('has-active', active > 0);
+  }
+  function sync() {
+    if (isOfficial()) {
+      if (badge.parentElement !== summary) summary.append(badge);
+    } else if (badge.parentElement !== badgeHome) {
+      badgeHome.insertBefore(badge, badgeNext?.parentNode === badgeHome ? badgeNext : null);
+    }
+    decorateTypes();
+  }
+  new MutationObserver(sync).observe(officialTab, {attributes: true, attributeFilter: ['aria-selected']});
+  new MutationObserver(decorateTypes).observe(types, {childList: true});
+  sync();
+})();
+
 </script>
 </body></html>
