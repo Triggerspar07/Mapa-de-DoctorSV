@@ -2325,7 +2325,7 @@ function renderResultadosBuscarSucursal(consulta, resultados){
   });
 }
 
-function seleccionarResultadoBusqueda(id){
+function seleccionarResultadoBusqueda(id, opciones = {}){
   const suc = SUCURSALES.find(s=>String(s.id)===String(id));
   document.getElementById('resultadosBuscarSucursal').style.display = 'none';
   document.getElementById('inputBuscarSucursal').value = suc ? suc.nombre : '';
@@ -2357,7 +2357,7 @@ function seleccionarResultadoBusqueda(id){
   aplicarFiltros();
 
   const marcador = estado.marcadoresPorId.get(suc.id);
-  if(marcador && mapa.hasLayer(marcador)) mapa.setView(marcador.getLatLng(), 15, {animate:true});
+  if(marcador && mapa.hasLayer(marcador)) mapa.setView(marcador.getLatLng(), 15, {animate:opciones.animar!==false});
   abrirPanelDetalle(suc.id);
 }
 
@@ -4130,4 +4130,5 @@ $('catAcceso').onsubmit=async e=>{e.preventDefault();const token=version,passwor
 new MutationObserver(()=>{btn.hidden=document.getElementById('tabDemo').getAttribute('aria-selected')==='true';}).observe(document.getElementById('tabDemo'),{attributes:true,attributeFilter:['aria-selected']});
 })();
 </script>
+<script src="assets/enlaces-centros.js"></script>
 </body></html>
