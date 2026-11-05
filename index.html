@@ -1527,7 +1527,10 @@ body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia)
     </div>
 
     <div class="sidebar__seccion">
-      <div class="sidebar__titulo">Buscar sucursal / cadena</div>
+      <div class="sidebar__titulo">
+        Buscar sucursal / cadena
+        <button class="link-mini" id="btnLimpiarBusquedaSucursal" type="button" aria-label="Limpiar búsqueda de sucursal o cadena" aria-controls="inputBuscarSucursal resultadosBuscarSucursal">Limpiar</button>
+      </div>
       <p class="sidebar__ayuda">Si eliges arriba un departamento o municipio, la búsqueda solo mostrará resultados de esa zona.</p>
       <div class="buscador-sucursal" style="position:relative">
         <input class="sidebar__select" id="inputBuscarSucursal" type="text" placeholder="Sucursal, cadena, estudio o servicio..." autocomplete="off" style="width:100%">
@@ -2366,6 +2369,12 @@ function seleccionarResultadoBusqueda(id, opciones = {}){
 function inicializarBuscadorSucursal(){
   const input = document.getElementById('inputBuscarSucursal');
   const cont = document.getElementById('resultadosBuscarSucursal');
+  document.getElementById('btnLimpiarBusquedaSucursal').addEventListener('click', ()=>{
+    input.value = '';
+    cont.replaceChildren();
+    cont.style.display = 'none';
+    input.focus();
+  });
   input.addEventListener('input', ()=>{
     if(normalizarTexto(input.value)) renderResultadosBuscarSucursal(input.value, buscarSucursalesTexto(input.value));
     else cont.style.display = 'none';
