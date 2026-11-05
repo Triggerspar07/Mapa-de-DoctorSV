@@ -2215,17 +2215,16 @@ const INDICE_PRUEBAS_ESPECIALES = (()=>{
 // especiales, y en los medicamentos de Fase 2 de su cadena (si es
 // farmacia). Devuelve, junto a cada sucursal, la razón de la coincidencia
 // para mostrarla en el resultado.
-// Para tokens cortos (siglas típicas de estudios médicos: TAC, ECG, USG,
-// MAPA...) se exige coincidencia de PALABRA COMPLETA, no solo substring.
-// Antes "TAC" encontraba "esTACión" o "TACuba" (nombres de lugar que
-// simplemente contienen esas letras) en vez de los centros que realmente
-// hacen tomografía. Para tokens más largos se mantiene el substring/prefijo
-// normal, que es más flexible mientras el usuario escribe.
+// Las palabras incompletas se buscan desde el inicio de una palabra para
+// mostrar resultados al escribir ("zara" encuentra "Zaragoza"). Solo las
+// siglas médicas conocidas exigen palabra completa: "TAC" no debe encontrar
+// "Tacuba" ni "estación". Las búsquedas largas conservan su coincidencia previa.
 function coincideToken(texto, token){
-  if(token.length <= 4){
-    const escapado = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp('(^|[^a-z0-9ñ])' + escapado + '($|[^a-z0-9ñ])');
-    return re.test(texto);
+  const escapado = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const siglaMedica = ['tac','ecg','usg','mapa','rx','rm','eeg','ekg','emg'].includes(token);
+  if(siglaMedica || token.length <= 4){
+    const final = siglaMedica ? '($|[^a-z0-9ñ])' : '';
+    return new RegExp('(^|[^a-z0-9ñ])' + escapado + final).test(texto);
   }
   return texto.includes(token);
 }
