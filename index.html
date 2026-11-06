@@ -3,7 +3,7 @@
 <html lang="es" data-qb-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>Red Nacional de Servicios Doctor SV · Mapa Interactivo</title>
+<title>DoctorSV · Mapa de centros</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
@@ -956,7 +956,7 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 .mapas-tabs{display:flex;gap:6px;min-width:0}
 .mapas-tabs button{font:inherit;font-size:13px;font-weight:750;border:1px solid var(--border-strong);border-radius:7px;padding:8px 12px;cursor:pointer;background:var(--surface);color:var(--text);white-space:nowrap}
 .mapas-tabs button[aria-selected="true"]{border:2px solid var(--text-heading);text-decoration:underline;text-underline-offset:4px;background:var(--surface-muted)}
-#etiquetaMapa{font-size:11px;font-weight:750;letter-spacing:.03em;color:var(--text-heading)}
+
 #avisoDemo{flex:none;position:relative;z-index:4000;padding:10px 16px;border-bottom:3px double #492200;background:#fff0c2;color:#492200;font-size:12px;font-weight:900;line-height:1.45;text-align:center}
 #app{flex:1;min-height:0;height:auto;grid-template-rows:var(--topbar-h) minmax(0,1fr)}
 .mapa-wrap{min-height:0;min-width:0}
@@ -981,7 +981,7 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 .topbar-popover{max-width:calc(100vw - 20px)}
 @media(max-width:1000px) and (min-width:901px){:root{--topbar-h:112px}.topbar{display:grid;grid-template-columns:minmax(160px,1fr) auto;grid-template-rows:44px 42px;padding:7px 10px;gap:6px}.topbar__acciones{grid-column:2;grid-row:1}.topbar__buscador{grid-column:1/-1;grid-row:2;max-width:none}.topbar__marca{min-width:0}}
 @media(max-width:900px){.topbar-popover{top:calc(var(--topbar-h) + 60px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 100px)}}
-@media(max-width:600px){.mapas-nav{min-height:76px;flex-wrap:wrap;gap:5px;padding:7px 10px}.mapas-tabs{width:100%}.mapas-tabs button{flex:1;font-size:12px;padding:8px 6px}#etiquetaMapa{font-size:10px}#avisoDemo{font-size:10px;padding:8px 10px;min-height:48px}.sidebar,.overlay-movil{top:calc(var(--topbar-h) + 76px)}.mapa-demo .sidebar,.mapa-demo .overlay-movil{top:calc(var(--topbar-h) + 124px)}.topbar-popover{top:calc(var(--topbar-h) + 84px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 132px)}}
+@media(max-width:600px){.mapas-nav{min-height:76px;flex-wrap:wrap;gap:5px;padding:7px 10px}.mapas-tabs{width:100%}.mapas-tabs button{flex:1;font-size:12px;padding:8px 6px}#avisoDemo{font-size:10px;padding:8px 10px;min-height:48px}.sidebar,.overlay-movil{top:calc(var(--topbar-h) + 76px)}.mapa-demo .sidebar,.mapa-demo .overlay-movil{top:calc(var(--topbar-h) + 124px)}.topbar-popover{top:calc(var(--topbar-h) + 84px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 132px)}}
 @media(max-width:380px){.topbar .btn-icono{min-width:30px;width:30px;padding:6px}.topbar__acciones{gap:2px}#badgeTotal{width:110px;flex-basis:110px;font-size:8px}.mapas-tabs button{font-size:11px}}
 @media(max-width:1000px) and (min-width:601px){body.mapa-demo{--topbar-h:64px}.mapa-demo .topbar{grid-template-rows:44px}}
 @media(max-width:600px){body.mapa-demo{--topbar-h:112px}.mapa-demo .topbar{grid-template-rows:38px 44px}.mapa-demo .topbar__acciones{grid-row:2}}
@@ -1018,7 +1018,7 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 .mapas-tabs{display:flex;gap:6px;min-width:0}
 .mapas-tabs button{font:inherit;font-size:13px;font-weight:750;border:1px solid var(--border-strong);border-radius:7px;padding:8px 12px;cursor:pointer;background:var(--surface);color:var(--text);white-space:nowrap}
 .mapas-tabs button[aria-selected="true"]{border:2px solid var(--text-heading);text-decoration:underline;text-underline-offset:4px;background:var(--surface-muted)}
-#etiquetaMapa{font-size:11px;font-weight:750;letter-spacing:.03em;color:var(--text-heading)}
+
 #avisoDemo{flex:none;position:relative;z-index:4000;padding:10px 16px;border-bottom:3px double #492200;background:#fff0c2;color:#492200;font-size:12px;font-weight:900;line-height:1.45;text-align:center}
 #app{flex:1;min-height:0;height:auto;grid-template-rows:var(--topbar-h) minmax(0,1fr)}
 .mapa-wrap{min-height:0;min-width:0}
@@ -1043,7 +1043,7 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 .topbar-popover{max-width:calc(100vw - 20px)}
 @media(max-width:1000px) and (min-width:901px){:root{--topbar-h:112px}.topbar{display:grid;grid-template-columns:minmax(160px,1fr) auto;grid-template-rows:44px 42px;padding:7px 10px;gap:6px}.topbar__acciones{grid-column:2;grid-row:1}.topbar__buscador{grid-column:1/-1;grid-row:2;max-width:none}.topbar__marca{min-width:0}}
 @media(max-width:900px){.topbar-popover{top:calc(var(--topbar-h) + 60px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 100px)}}
-@media(max-width:600px){.mapas-nav{min-height:76px;flex-wrap:wrap;gap:5px;padding:7px 10px}.mapas-tabs{width:100%}.mapas-tabs button{flex:1;font-size:12px;padding:8px 6px}#etiquetaMapa{font-size:10px}#avisoDemo{font-size:10px;padding:8px 10px;min-height:48px}.sidebar,.overlay-movil{top:calc(var(--topbar-h) + 76px)}.mapa-demo .sidebar,.mapa-demo .overlay-movil{top:calc(var(--topbar-h) + 124px)}.topbar-popover{top:calc(var(--topbar-h) + 84px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 132px)}}
+@media(max-width:600px){.mapas-nav{min-height:76px;flex-wrap:wrap;gap:5px;padding:7px 10px}.mapas-tabs{width:100%}.mapas-tabs button{flex:1;font-size:12px;padding:8px 6px}#avisoDemo{font-size:10px;padding:8px 10px;min-height:48px}.sidebar,.overlay-movil{top:calc(var(--topbar-h) + 76px)}.mapa-demo .sidebar,.mapa-demo .overlay-movil{top:calc(var(--topbar-h) + 124px)}.topbar-popover{top:calc(var(--topbar-h) + 84px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 132px)}}
 @media(max-width:380px){.topbar .btn-icono{min-width:30px;width:30px;padding:6px}.topbar__acciones{gap:2px}#badgeTotal{width:110px;flex-basis:110px;font-size:8px}.mapas-tabs button{font-size:11px}}
 @media(max-width:1000px) and (min-width:601px){body.mapa-demo{--topbar-h:64px}.mapa-demo .topbar{grid-template-rows:44px}}
 @media(max-width:600px){body.mapa-demo{--topbar-h:112px}.mapa-demo .topbar{grid-template-rows:38px 44px}.mapa-demo .topbar__acciones{grid-row:2}}
@@ -1073,7 +1073,7 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 .mapas-tabs{display:flex;gap:6px;min-width:0}
 .mapas-tabs button{font:inherit;font-size:13px;font-weight:750;border:1px solid var(--border-strong);border-radius:7px;padding:8px 12px;cursor:pointer;background:var(--surface);color:var(--text);white-space:nowrap}
 .mapas-tabs button[aria-selected="true"]{border:2px solid var(--text-heading);text-decoration:underline;text-underline-offset:4px;background:var(--surface-muted)}
-#etiquetaMapa{font-size:11px;font-weight:750;letter-spacing:.03em;color:var(--text-heading)}
+
 #avisoDemo{flex:none;position:relative;z-index:4000;padding:10px 16px;border-bottom:3px double #492200;background:#fff0c2;color:#492200;font-size:12px;font-weight:900;line-height:1.45;text-align:center}
 #app{flex:1;min-height:0;height:auto;grid-template-rows:var(--topbar-h) minmax(0,1fr)}
 .mapa-wrap{min-height:0;min-width:0}
@@ -1098,7 +1098,7 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidd
 .topbar-popover{max-width:calc(100vw - 20px)}
 @media(max-width:1000px) and (min-width:901px){:root{--topbar-h:112px}.topbar{display:grid;grid-template-columns:minmax(160px,1fr) auto;grid-template-rows:44px 42px;padding:7px 10px;gap:6px}.topbar__acciones{grid-column:2;grid-row:1}.topbar__buscador{grid-column:1/-1;grid-row:2;max-width:none}.topbar__marca{min-width:0}}
 @media(max-width:900px){.topbar-popover{top:calc(var(--topbar-h) + 60px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 100px)}}
-@media(max-width:600px){.mapas-nav{min-height:76px;flex-wrap:wrap;gap:5px;padding:7px 10px}.mapas-tabs{width:100%}.mapas-tabs button{flex:1;font-size:12px;padding:8px 6px}#etiquetaMapa{font-size:10px}#avisoDemo{font-size:10px;padding:8px 10px;min-height:48px}.sidebar,.overlay-movil{top:calc(var(--topbar-h) + 76px)}.mapa-demo .sidebar,.mapa-demo .overlay-movil{top:calc(var(--topbar-h) + 124px)}.topbar-popover{top:calc(var(--topbar-h) + 84px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 132px)}}
+@media(max-width:600px){.mapas-nav{min-height:76px;flex-wrap:wrap;gap:5px;padding:7px 10px}.mapas-tabs{width:100%}.mapas-tabs button{flex:1;font-size:12px;padding:8px 6px}#avisoDemo{font-size:10px;padding:8px 10px;min-height:48px}.sidebar,.overlay-movil{top:calc(var(--topbar-h) + 76px)}.mapa-demo .sidebar,.mapa-demo .overlay-movil{top:calc(var(--topbar-h) + 124px)}.topbar-popover{top:calc(var(--topbar-h) + 84px)}.mapa-demo .topbar-popover{top:calc(var(--topbar-h) + 132px)}}
 @media(max-width:380px){.topbar .btn-icono{min-width:30px;width:30px;padding:6px}.topbar__acciones{gap:2px}#badgeTotal{width:110px;flex-basis:110px;font-size:8px}.mapas-tabs button{font-size:11px}}
 @media(max-width:1000px) and (min-width:601px){body.mapa-demo{--topbar-h:64px}.mapa-demo .topbar{grid-template-rows:44px}}
 @media(max-width:600px){body.mapa-demo{--topbar-h:112px}.mapa-demo .topbar{grid-template-rows:38px 44px}.mapa-demo .topbar__acciones{grid-row:2}}
@@ -1152,7 +1152,6 @@ body[data-visual-map="oficial"] .mapas-tabs button {
   border-radius: 0; background: transparent; color: var(--sv-muted); text-decoration: none;
 }
 body[data-visual-map="oficial"] .mapas-tabs button[aria-selected="true"] { color: var(--sv-ink); border-bottom-color: var(--sv-accent); }
-body[data-visual-map="oficial"] #etiquetaMapa { font-size: 11px; font-weight: 500; letter-spacing: 0; color: var(--sv-muted); }
 #svAbrirGuia { display: none; }
 body[data-visual-map="oficial"] #svAbrirGuia {
   display: inline-flex; align-items: center; justify-content: center; margin-left: auto;
@@ -1286,7 +1285,6 @@ body[data-visual-map="oficial"] #svEntendido { background: transparent; border: 
 @media (max-width: 900px) {
   body[data-visual-map="oficial"] { --topbar-h: 112px; }
   body[data-visual-map="oficial"] .mapas-nav { padding: 0 12px; gap: 12px; }
-  body[data-visual-map="oficial"] #etiquetaMapa { display: none; }
   body[data-visual-map="oficial"] .topbar {
     display: grid; grid-template-columns: 40px minmax(0,1fr) auto; grid-template-rows: 40px 42px;
     height: var(--topbar-h); padding: 10px 12px; gap: 8px;
@@ -1419,7 +1417,7 @@ body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia)
 
 </style>
 <style id="catalogo-nacional-estilos">
-@media(max-width:600px){body[data-visual-map="oficial"] .mapas-nav{display:grid;grid-template-columns:1fr auto;grid-template-rows:40px 40px;height:96px;min-height:96px;gap:4px 10px;padding:6px 10px}body[data-visual-map="oficial"] .mapas-tabs{grid-column:1/-1;grid-row:1;width:100%;justify-content:space-between}body[data-visual-map="oficial"] #etiquetaMapa{display:none}body[data-visual-map="oficial"] #abrirCatalogoNacional{grid-column:1;grid-row:2;font-size:12px;white-space:nowrap}body[data-visual-map="oficial"] #svAbrirGuia{grid-column:2;grid-row:2;margin:0}body[data-visual-map="oficial"] :is(.sidebar,.overlay-movil){top:calc(var(--topbar-h) + 96px)}body[data-visual-map="oficial"] .topbar-popover{top:calc(var(--topbar-h) + 104px)}}
+@media(max-width:600px){body[data-visual-map="oficial"] .mapas-nav{display:grid;grid-template-columns:1fr auto;grid-template-rows:40px 40px;height:96px;min-height:96px;gap:4px 10px;padding:6px 10px}body[data-visual-map="oficial"] .mapas-tabs{grid-column:1/-1;grid-row:1;width:100%;justify-content:space-between}body[data-visual-map="oficial"] #abrirCatalogoNacional{grid-column:1;grid-row:2;font-size:12px;white-space:nowrap}body[data-visual-map="oficial"] #svAbrirGuia{grid-column:2;grid-row:2;margin:0}body[data-visual-map="oficial"] :is(.sidebar,.overlay-movil){top:calc(var(--topbar-h) + 96px)}body[data-visual-map="oficial"] .topbar-popover{top:calc(var(--topbar-h) + 104px)}}
 
 #catalogoNacional{background:var(--bg-panel,#102938);color:var(--texto-principal,#edf5fa);border:1px solid #6c8496;border-radius:16px;width:min(1200px,94vw);max-height:90dvh;padding:22px;box-sizing:border-box}#catalogoNacional::backdrop{background:#000a}#catalogoNacional h2{margin:0}#catalogoNacional .cat-cab{display:flex;justify-content:space-between;gap:12px;align-items:start}#catalogoNacional button,#catalogoNacional input,#catalogoNacional select{font:inherit;padding:10px;border-radius:8px;border:1px solid #7796a8;background:#132f41;color:#fff}#catalogoNacional button{cursor:pointer}#catalogoNacional button[aria-selected=true]{background:#126e63;border-color:#5ee5bb}#catalogoNacional .cat-tabs,#catalogoNacional .cat-filtros{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}#catalogoNacional label{display:flex;flex-direction:column;gap:5px;font-size:13px}#catalogoNacional input[type=search]{min-width:220px}#catTablaWrap{overflow:auto;max-height:53dvh;border:1px solid #58768a;border-radius:8px}#catalogoNacional table{border-collapse:collapse;width:100%;font-size:13px}#catalogoNacional th,#catalogoNacional td{text-align:left;padding:12px;border-bottom:1px solid #496173;vertical-align:top;min-width:95px}#catalogoNacional th{position:sticky;top:0;background:#133c4a;z-index:1}#catalogoNacional td:first-child{min-width:245px}#catalogoNacional .cat-status{display:inline-block;padding:4px 8px;border-radius:6px;background:#394b5a;color:#fff;font-weight:600}#catalogoNacional .cat-status--activo{background:#176247;color:#edfff5}#catalogoNacional .cat-status--inactivo{background:#942b35;color:#fff1f2}#catalogoNacional .cat-status--temporal{background:#f2bd55;color:#332204}#catalogoNacional .cat-muted{font-size:13px;color:#c1d2dc}#catAcceso{padding:20px;border:1px solid #58768a;border-radius:10px}#catError{color:#ffb9b9}#abrirCatalogoNacional{border:1px solid #73a9b6;background:#153d4b;color:#fff;border-radius:8px;padding:8px 12px;cursor:pointer}#catalogoNacional [hidden]{display:none!important}@media(max-width:600px){#catalogoNacional{padding:14px}#catalogoNacional input[type=search]{min-width:0;width:100%;box-sizing:border-box}.cat-filtros label{flex:1 1 130px}}
 </style>
@@ -1430,9 +1428,9 @@ body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia)
 </head>
 <body class="dark-mode" data-visual-map="oficial">
 
-<nav class="mapas-nav" aria-label="Seleccionar mapa"><div class="mapas-tabs" role="tablist" aria-label="Mapas"><button type="button" role="tab" id="tabOficial" aria-controls="mapa" aria-selected="true">Red Doctor SV</button><button type="button" role="tab" id="tabDemo" aria-controls="mapaDemo" aria-selected="false">Proyecto en desarrollo</button></div><span id="etiquetaMapa">MAPA OFICIAL · Red Doctor SV</span><button id="svAbrirGuia" type="button" aria-controls="svGuia" aria-label="Cómo usar el mapa">Guía</button></nav>
-<div id="avisoDemo" hidden>PROYECTO EN DESARROLLO — DATOS DE DEMOSTRACIÓN — NO UTILIZAR PARA DERIVAR PACIENTES</div>
-<dialog id="accesoDemo" aria-labelledby="tituloAcceso" aria-describedby="notaAcceso"><form id="formAcceso"><h2 id="tituloAcceso">Proyecto en desarrollo</h2><p id="notaAcceso">Ingresa la contraseña para abrir los ejemplos DEMO. Son datos de demostración; no utilizar para derivar pacientes.</p><label for="claveDemo">Contraseña</label><input id="claveDemo" type="password" required autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="errorClave"><p id="errorClave" role="alert" aria-live="polite"></p><div class="acceso-acciones"><button id="cancelarAcceso" type="button">Cancelar</button><button type="submit">Ingresar</button></div></form></dialog>
+<nav class="mapas-nav" aria-label="Seleccionar mapa"><div class="mapas-tabs" role="tablist" aria-label="Mapas"><button type="button" role="tab" id="tabOficial" aria-controls="mapa" aria-selected="true">Red actual</button><button type="button" role="tab" id="tabDemo" aria-controls="mapaDemo" aria-selected="false">Nuevos centros</button></div><button id="svAbrirGuia" type="button" aria-controls="svGuia" aria-label="Cómo usar el mapa">Guía</button></nav>
+<div id="avisoDemo" hidden>DATOS DE DEMOSTRACIÓN · NO UTILIZAR PARA DERIVAR PACIENTES</div>
+<dialog id="accesoDemo" aria-labelledby="tituloAcceso" aria-describedby="notaAcceso"><form id="formAcceso"><h2 id="tituloAcceso">Nuevos centros</h2><p id="notaAcceso">Este espacio está destinado a incorporar nuevos centros. Ingresa la contraseña para consultar los datos de demostración. No los uses para derivar pacientes.</p><label for="claveDemo">Contraseña</label><input id="claveDemo" type="password" required autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="errorClave"><p id="errorClave" role="alert" aria-live="polite"></p><div class="acceso-acciones"><button id="cancelarAcceso" type="button">Cancelar</button><button type="submit">Ingresar</button></div></form></dialog>
 <div id="app">
 
   <!-- ============================== TOPBAR ============================== -->
@@ -1444,7 +1442,7 @@ body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia)
     <div class="topbar__marca">
       <div class="topbar__marca-icono"><img src="assets/doctorsv-asclepio.png?v=20261104" alt="" width="40" height="40"></div>
       <div class="topbar__titulo">
-        <strong>DoctorSV · Red de servicios</strong>
+        <strong>DoctorSV</strong>
         <span>Farmacias · Laboratorios · Imagen · Atención presencial</span>
       </div>
     </div>
@@ -3874,7 +3872,7 @@ function actualizarSubfiltroInactivosEspeciales(){const q=normalizarTexto(docume
 // Bloqueo de demostración de un HTML estático. No protege datos ni código.
 // La clave se compara exactamente en memoria; no se persiste la autorización.
 let mapaActivo = 'oficial', revisionMapa = 0;
-const ADVERTENCIA_DEMO = 'PROYECTO EN DESARROLLO — DATOS DE DEMOSTRACIÓN — NO UTILIZAR PARA DERIVAR PACIENTES';
+const ADVERTENCIA_DEMO = 'DATOS DE DEMOSTRACIÓN · NO UTILIZAR PARA DERIVAR PACIENTES';
 const IDS_EJEMPLOS = ["farmacia:E10F1482", "farmacia:E10F0910", "laboratorio:97", "laboratorio:1723", "imagen:PTEE", "imagen:117", "atencion:8", "atencion:556"];
 const SUCURSALES_DEMO = IDS_EJEMPLOS.map(id=>{
   const s=structuredClone(SUCURSALES_REALES.find(s=>s.id===id));
@@ -3923,8 +3921,6 @@ function cambiarMapa(destino){
   document.getElementById('mapaDemo').hidden=destino!=='demo';
   document.getElementById('tabOficial').setAttribute('aria-selected',String(destino==='oficial'));
   document.getElementById('tabDemo').setAttribute('aria-selected',String(destino==='demo'));
-  document.querySelector('.topbar__titulo strong').textContent=destino==='demo'?'DEMO · Proyecto en desarrollo':'Red Nacional de Servicios · Doctor SV';
-  document.getElementById('etiquetaMapa').textContent=destino==='demo'?'DEMO · Ejemplos sin participación acreditada':'MAPA OFICIAL · Red Doctor SV';
   for(const id of ['inputBuscador','inputBuscarSucursal','inputBuscarDistrito','buscadorCadenasTop','buscadorEstudiosTop','buscadorEspeciales','buscadorFase2'])document.getElementById(id).value='';
   for(const id of ['resultadosBuscarSucursal','resultadosBuscarDistrito']){const el=document.getElementById(id);el.replaceChildren();el.style.display='none';}
   for(const id of ['selectDepartamento','selectMunicipio','selectDistrito']){const old=document.getElementById(id);old.replaceWith(old.cloneNode(false));}
