@@ -1425,6 +1425,22 @@ body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia)
 <style>body .topbar__marca .topbar__marca-icono{display:flex;width:44px;height:44px;flex-shrink:0;background:#fffaf0;border:1px solid #d5ddd9;border-radius:10px;align-items:center;justify-content:center} .topbar__marca-icono img{width:38px;height:38px;object-fit:contain}@media(max-width:600px){body .topbar__marca .topbar__marca-icono{width:32px;height:36px;border-radius:7px}.topbar__marca-icono img{width:29px;height:31px}.topbar__marca{gap:6px}}</style>
 <style>@media(max-width:600px){#catalogoNacional{padding:16px}.cat-cab{position:sticky;top:-16px;z-index:2;background:var(--bg-panel,#102938);padding:8px 0 12px}.cat-cab h2{font-size:22px}#catalogoNacional .cat-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}#catalogoNacional .cat-tabs button{flex:0 0 auto}#catCerrar{white-space:nowrap}#catAcceso{margin-top:12px}}</style>
 <style>#catalogoNacional input::placeholder{color:#b9cdd7;opacity:1}</style>
+<style>
+body[data-visual-map="oficial"] .topbar__titulo strong { line-height: 1.2; }
+body[data-visual-map="oficial"] .topbar__titulo span { display: block; font-weight: 650; line-height: 1.25; }
+@media (min-width: 901px) {
+  body[data-visual-map="oficial"] { --topbar-h: 82px; }
+  body[data-visual-map="oficial"] .topbar__marca { flex-basis: 232px; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  body[data-visual-map="oficial"] { --topbar-h: 134px; }
+  body[data-visual-map="oficial"] .topbar { grid-template-rows: 62px 42px; }
+}
+@media (max-width: 600px) {
+  body[data-visual-map="oficial"] { --topbar-h: 172px; }
+  body[data-visual-map="oficial"] .topbar { grid-template-rows: 62px 42px 44px; }
+}
+</style>
 </head>
 <body class="dark-mode" data-visual-map="oficial">
 
@@ -1442,7 +1458,7 @@ body[data-visual-map="oficial"] .panel-detalle .subseccion:has(#bloqueDistancia)
     <div class="topbar__marca">
       <div class="topbar__marca-icono"><img src="assets/doctorsv-asclepio.png?v=20261104" alt="" width="40" height="40"></div>
       <div class="topbar__titulo">
-        <strong>DoctorSV</strong>
+        <strong id="tituloMapa">Red Nacional de servicios - DoctorSV</strong>
         <span>Farmacias · Laboratorios · Imagen · Atención presencial</span>
       </div>
     </div>
@@ -3916,6 +3932,7 @@ function cambiarMapa(destino){
   MEDICAMENTOS_FASE2=destino==='oficial'?MEDICAMENTOS_FASE2_REAL:Object.fromEntries(Object.entries(MEDICAMENTOS_FASE2_REAL).filter(([c])=>SUCURSALES.some(s=>s.tipo==='farmacia'&&(s.cadena===c||s.proveedor===c))).map(([c,v])=>[c,structuredClone(v)]));
   gruposMapa=ctx.grupos;
   document.body.classList.toggle('mapa-demo',destino==='demo');
+  document.getElementById('tituloMapa').textContent = destino === 'oficial' ? 'Red Nacional de servicios - DoctorSV' : 'DoctorSV';
   document.getElementById('avisoDemo').hidden=destino!=='demo';
   document.getElementById('mapa').hidden=destino!=='oficial';
   document.getElementById('mapaDemo').hidden=destino!=='demo';
