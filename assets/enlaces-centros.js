@@ -7,7 +7,9 @@ globalThis.DoctorSVEnlaces=(()=>{
     if(target===null)return {status:'none'};
     const match=/^farmacia:([A-Za-z0-9_-]{1,80})$/.exec(target);
     if(!match)return {status:'invalid'};
-    const candidates=rows.filter(row=>row.tipo==='farmacia'&&String(row.codigo).trim()===match[1]);
+    const pharmacies=rows.filter(row=>row.tipo==='farmacia');
+    const exact=pharmacies.filter(row=>String(row.codigo).trim()===match[1]);
+    const candidates=exact.length?exact:pharmacies.filter(row=>row.codigoAnterior===match[1]);
     if(!candidates.length)return {status:'missing'};
     const name=params.get('nombre');
     const matches=name?candidates.filter(row=>normalize(row.nombre)===normalize(name)):candidates;

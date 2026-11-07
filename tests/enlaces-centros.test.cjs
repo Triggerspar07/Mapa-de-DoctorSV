@@ -18,6 +18,11 @@ test('inactivas y pendientes de ubicación siguen abriendo su ficha por identida
 test('no abre otra farmacia si el código fue reutilizado con un nombre distinto',()=>{
   assert.equal(resolve('?centro=farmacia:E10F1506&nombre=Otra+farmacia',[row]).status,'mismatch');
 });
+test('el código anterior de una farmacia corregida abre la misma ficha con su código vigente',()=>{
+  const brasil={...row,id:'farmacia:E10F0420',codigo:'E10F0420',codigoAnterior:'E10F420',nombre:'FARMACIAS BRASIL N° 08'};
+  assert.equal(resolve('?centro=farmacia:E10F420&nombre=Farmacias+Brasil+N%C2%B0+08',[brasil]).branch.id,brasil.id);
+  assert.equal(resolve('?centro=farmacia:E10F420&nombre=Otra',[brasil]).status,'mismatch');
+});
 test('no escoge arbitrariamente cuando dos registros comparten código',()=>{
   const other={...row,id:'farmacia:E10F1506:copia-2',nombre:'Otra farmacia'};
   assert.equal(resolve('?centro=farmacia:E10F1506',[row,other]).status,'ambiguous');

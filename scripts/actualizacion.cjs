@@ -14,8 +14,9 @@ function coordinateReason(r){
  return '';
 }
 function distance(a,b){const x=(coord(a.Longitud)-coord(b.Longitud))*108000,y=(coord(a.Latitud)-coord(b.Latitud))*111000;return Math.hypot(x,y);}
-function reconcile(tipo,incoming,previous){
+function reconcile(tipo,incoming,previous,{previousSource=[],fecha='2026-11-04',fuente='Sucursales roll out 4-11-2026.json'}={}){
  const matched=new Set(),changes=[];
+ const sourceByCode=new Map(previousSource.map(row=>[code(row),row]));
  const rows=incoming.map((input,index)=>{
   const r={...input};
   let candidates=previous.filter(o=>code(o)===code(r)&&identity(o,r));
@@ -26,25 +27,35 @@ function reconcile(tipo,incoming,previous){
   if(old)matched.add(old);
   r.IdEstable=tipo+':'+encodeURIComponent(code(r)||'sin-codigo-'+(index+1));
   r.CoordenadasOriginales={Latitud:input.Latitud??null,Longitud:input.Longitud??null};
-  r.AuditoriaActualizacion={fecha:'2026-11-04',fuente:'Sucursales roll out 4-11-2026.json',fila:index+1,codigoAnterior:old?code(old):null};
+  r.AuditoriaActualizacion={fecha,fuente,fila:index+1,codigoAnterior:old?code(old):null};
   let reason=coordinateReason(r);
   const auditable=old&&['validada_geograficamente','corregida_contrastada','confirmada_fuente_externa','heredada_sin_reconfirmacion_actual'].includes(old.AuditoriaUbicacion?.estado);
   if(old){
    r.AuditoriaUbicacion=structuredClone(old.AuditoriaUbicacion||{});
+   const oldSource=sourceByCode.get(code(old));
+   const previousAddress=old.AuditoriaActualizacion?.direccionFuente??(oldSource&&identity(old,oldSource)?oldSource.Dirección:old.Dirección);
+   const sameSourceAddress=sameAddress({Dirección:previousAddress},r);
+   const original=old.CoordenadasOriginales;
+   const sameOriginal=original&&['Latitud','Longitud'].every(key=>String(original[key]??'').trim()===String(r[key]??'').trim());
+   const closeToOriginal=distance(original||{},r)<=5;
    if(!r.Distrito&&old.Distrito){r.Distrito=old.Distrito;r.DistritoPendiente=!!old.DistritoPendiente;}
    // Full address is unchanged: preserve an audited correction even when the source repeats its old coordinate.
-   if(sameAddress(old,r)&&auditable&&!old.ubicacionPendiente&&!coordinateReason(old)&&((!reason&&distance(old,r)<=100)||distance({...old,Latitud:old.CoordenadasOriginales?.Latitud,Longitud:old.CoordenadasOriginales?.Longitud},r)<=5)){
+   if((sameAddress(old,r)||sameSourceAddress)&&auditable&&!old.ubicacionPendiente&&!coordinateReason(old)&&((!reason&&distance(old,r)<=100)||sameOriginal||closeToOriginal)){
     r.Latitud=old.Latitud;r.Longitud=old.Longitud;r.ubicacionPendiente=false;
+    if(sameSourceAddress&&(sameOriginal||closeToOriginal)&&!sameAddress(old,r)){
+     r.AuditoriaActualizacion.direccionFuente=r.Dirección;
+     r.Dirección=old.Dirección;
+    }
     for(const k of ['Distrito','DistritoPendiente','Municipio','Departamento','GrupoUbicacion','EvidenciaGrupo'])if(old[k]!==undefined)r[k]=old[k];
    }else{
     r.ubicacionPendiente=true;
-    reason=reason||(old.ubicacionPendiente?(old.AuditoriaUbicacion?.motivos||[]).join(' '):!sameAddress(old,r)?'La dirección cambió respecto de la ubicación auditada. Falta confirmar si es un traslado o una corrección de texto; no se reutiliza el punto anterior.':'Las coordenadas cambiaron más de 100 metros respecto del punto auditado. Falta corroborar el local vigente.');
+    reason=reason||(old.ubicacionPendiente&&sameSourceAddress?(old.AuditoriaUbicacion?.motivos||[]).join(' '):'')||(!(sameAddress(old,r)||sameSourceAddress)?'La dirección cambió respecto de la ubicación auditada. Falta confirmar si es un traslado o una corrección de texto; no se reutiliza el punto anterior.':'Las coordenadas requieren un nuevo contraste con la dirección y el local vigente.');
    }
   }else{
    r.ubicacionPendiente=true;
    reason=reason||(candidates.length>1?'La identidad coincide con varios registros anteriores. Falta resolver el establecimiento exacto.':previous.some(o=>code(o)===code(r))?'El código fue reutilizado para un nombre o dirección diferente. No se hereda el punto de la sucursal anterior.':'Centro incorporado sin una ubicación previamente auditada. Las coordenadas tienen formato válido, pero falta contrastar el punto con la dirección y la identidad del establecimiento.');
   }
-  if(r.ubicacionPendiente){r.AuditoriaUbicacion={...(r.AuditoriaUbicacion||{}),estado:'pendiente',fechaRevision:'2026-11-04',motivo:reason,motivos:[reason],coordenadasConfirmadasExternamente:false};delete r.GrupoUbicacion;}
+  if(r.ubicacionPendiente){r.AuditoriaUbicacion={...(r.AuditoriaUbicacion||{}),estado:'pendiente',fechaRevision:fecha,motivo:reason,motivos:[reason],coordenadasConfirmadasExternamente:false};delete r.GrupoUbicacion;}
   changes.push({id:r.IdEstable,codigo:code(r),nombre:name(r),nuevo:!old,codigoAnterior:old?code(old):null,estadoAnterior:old?.Estatus??old?.Status??null,estado:r.Estatus??r.Status,pendiente:r.ubicacionPendiente});
   return r;
  });

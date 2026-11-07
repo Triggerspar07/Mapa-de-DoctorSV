@@ -3,6 +3,14 @@ Un mapa con la finalidad de poder brindar una resoluciòn y gestiòn de manera r
 
 Pagina del mapa: https://triggerspar07.github.io/Mapa-de-DoctorSV/
 
+## Actualización del 6 de noviembre de 2026
+
+La red contiene 1 184 centros, 446 farmacias, 326 laboratorios, 177 centros de imagen y 235 de atención presencial. Se usaron las cuatro pestañas de la [hoja Roll Out de sucursales](https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714). Los códigos se validaron por categoría. El código SRS de Brasil VIII es E10F0420 y los enlaces con E10F420 también abren esa farmacia.
+
+Hay 1 008 activos, 71 inactivos temporales, 34 inactivos y 71 retirados. Ramblas San Miguel figura inactiva porque el registro de la SRS indica suspensión y el Roll Out figura activo. Las [57 ubicaciones pendientes](ubicaciones-pendientes-2026-11-06.csv) conservan ficha y motivo. Se revisó la coherencia de departamento, municipio y distrito con el catálogo territorial. Los distritos sin evidencia suficiente se muestran como pendientes.
+
+Se cotejaron los teléfonos, los tres horarios y todas las marcas de los nueve campos de laboratorio, las siete modalidades de imagen y los veinte procedimientos. Una celda vacía se muestra como «Sin dato» o queda fuera de la lista de disponibles. El catálogo general de medicamentos y estudios sigue su propia fuente.
+
 ## Actualización del 4 de noviembre de 2026
 
 La red contiene 1178 centros: 1005 activos, 74 inactivos temporales, 30 inactivos y 69 retirados. Los filtros de cada tipo permiten incluir los centros no activos. Las 54 ubicaciones pendientes conservan una ficha con el motivo y no generan marcadores ni rutas.

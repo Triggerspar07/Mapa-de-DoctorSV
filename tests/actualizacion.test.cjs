@@ -27,6 +27,18 @@ test('un error original de signo o decimales no sustituye una corrección histó
  const {rows}=api.reconcile('imagen',[{...old,Latitud:1370000,Longitud:89.2}],[audited]);
  assert.equal(rows[0].ubicacionPendiente,false);assert.equal(rows[0].Latitud,13.7);assert.equal(rows[0].Longitud,-89.2);
 });
+test('mantiene una ubicación auditada cuando la hoja repite dirección y coordenadas originales',()=>{
+ const original={...old,Latitud:'1,370,000',Longitud:'8,920,000'};
+ const audited={...old,Dirección:'Dirección del local verificada',CoordenadasOriginales:{Latitud:original.Latitud,Longitud:original.Longitud}};
+ const options={previousSource:[original],fecha:'2026-11-06',fuente:'Google Sheets'};
+ const {rows}=api.reconcile('imagen',[original],[audited],options);
+ assert.equal(rows[0].ubicacionPendiente,false);
+ assert.equal(rows[0].Dirección,audited.Dirección);
+ assert.equal(rows[0].Latitud,audited.Latitud);
+ assert.equal(rows[0].AuditoriaActualizacion.fuente,'Google Sheets');
+ const moved=api.reconcile('imagen',[{...original,Dirección:'Un local distinto',Latitud:13.8,Longitud:-89.2}],[audited],options);
+ assert.equal(moved.rows[0].ubicacionPendiente,true);
+});
 test('estudios inactivos son restringidos; temporales siguen públicos; nunca incluyen precios',()=>{
  const input={Medicamentos:[{Descripción:'M1',Fase:'FASE 1',Estado:'Activo','Precio Roll Out con IVA':1},{Descripción:'M3',Fase:'FASE 3',Estado:'Inactivo'}],Imagenes:[{Descripción:'I3',Estado:'Inactivo',Costo:42},{Descripción:'IT',Estado:'Inactivo temporal'}],'Laboratorios ':[{Descripción:'L3',Estado:'Inactivo'}],'Atenciones presenciales':[{Descripción:'A3',Estado:'Inactivo'}]};
  const r=api.catalogs(input);assert.equal(r.publicos.Imagenes.length,1);assert.equal(r.estudios3.length,3);assert.equal(r.medicamentos3.length,1);assert.equal(r.publicos.Medicamentos.length,1);assert.doesNotMatch(JSON.stringify(r),/Precio|Costo/);
