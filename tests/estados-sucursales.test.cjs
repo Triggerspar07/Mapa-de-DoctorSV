@@ -1,0 +1,7 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs'),vm=require('node:vm');
+const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
+const fn=html.slice(html.indexOf('function sucursalVisible(s){'),html.indexOf('function universoBusqueda()',html.indexOf('function sucursalVisible(s){')));
+function scenario({inactive=false,retired=false,scope=true}={}){const context={estado:{mostrarFarmaciasRetiradas:retired,mostrarInactivosPorTipo:{farmacia:inactive,laboratorio:inactive}},normalizarTexto:s=>s.toLowerCase(),pasaFiltrosComunes:()=>scope};vm.createContext(context);vm.runInContext(fn,context);return status=>context.sucursalVisible({tipo:'farmacia',estatusFuente:status,activo:status==='ACTIVO'});}
+test('retiradas no entran al activar farmacias inactivas o temporales',()=>{const visible=scenario({inactive:true});assert(visible('ACTIVO'));assert(visible('INACTIVO'));assert(visible('INACTIVO TEMPORAL'));assert(!visible('RETIRADO'));});
+test('retiradas se pueden mostrar sin activar inactivas',()=>{const visible=scenario({retired:true});assert(visible('RETIRADO'));assert(visible('ACTIVO'));assert(!visible('INACTIVO'));assert(!visible('INACTIVO TEMPORAL'));});
+test('los dos controles son independientes y respetan los demás filtros',()=>{for(const status of ['ACTIVO','INACTIVO','INACTIVO TEMPORAL','RETIRADO']){assert(scenario({retired:true,inactive:true})(status));assert(!scenario({retired:true,inactive:true,scope:false})(status));}assert(!scenario()('RETIRADO'));});
