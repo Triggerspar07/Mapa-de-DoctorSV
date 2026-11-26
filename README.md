@@ -34,4 +34,6 @@ El mapa acepta `?centro=farmacia%3AE10F1506&nombre=FARMACIA+EL+CARMEN`. El códi
 Los códigos inexistentes, ambiguos o con un nombre distinto muestran un aviso y no abren otra farmacia por aproximación. La vista normal sin parámetros conserva su comportamiento. Pruebas: `node --test`.
 
 
-[Última revisión: ubicaciones y agrupación por zoom, 25/11/2026](REPORTE-UBICACIONES-Y-ZOOM-2026-11-25.md).
+[Informe de ubicaciones y revisión anterior, 25/11/2026](REPORTE-UBICACIONES-Y-ZOOM-2026-11-25.md).
+
+Visualización vigente (26/11/2026): se muestran todos los marcadores según los filtros, sin agrupación por zoom. Se conservan las ubicaciones actualizadas y las referencias únicamente dentro de las fichas.

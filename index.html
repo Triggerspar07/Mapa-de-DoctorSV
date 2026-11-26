@@ -1442,8 +1442,6 @@ body[data-visual-map="oficial"] .topbar__titulo span { display: block; font-weig
 }
 </style>
 <style id="referencias-rollout-20261125">.aviso-referencia{padding:12px;margin:12px 0;border:2px solid #c98a16;border-radius:9px;background:#fff1c4;color:#352300;font-size:13px;line-height:1.5}.aviso-referencia>strong{display:block;font-weight:800}.aviso-referencia p{margin:8px 0 0}.validacion-referencia summary{cursor:pointer;font-weight:700;margin-top:6px}</style>
-<link rel="stylesheet" href="assets/vendor/markercluster/MarkerCluster.css?v=1.5.3">
-<style id="agrupacion-zoom-20261125">.mapa-cluster{display:flex;align-items:center;justify-content:center;background:#185c6c;color:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 7px #0005;font:700 15px/1 system-ui,sans-serif}.mapa-cluster span{display:block;text-align:center}.mapa-cluster:focus{outline:3px solid #318cf5;outline-offset:3px}</style>
 </head>
 <body class="dark-mode" data-visual-map="oficial">
 
@@ -1709,8 +1707,6 @@ body[data-visual-map="oficial"] .topbar__titulo span { display: block; font-weig
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="assets/vendor/markercluster/leaflet.markercluster.js?v=1.5.3"></script>
-<script src="assets/agrupacion-mapa.js?v=20261125b"></script>
 <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 
@@ -2382,7 +2378,7 @@ function seleccionarResultadoBusqueda(id, opciones = {}){
   aplicarFiltros();
 
   const marcador = estado.marcadoresPorId.get(suc.id);
-  if(marcador) mapa.setView(marcador.getLatLng(), mapaActivo==='oficial'?17:15, {animate:opciones.animar!==false});
+  if(marcador && mapa.hasLayer(marcador)) mapa.setView(marcador.getLatLng(), 15, {animate:opciones.animar!==false});
   abrirPanelDetalle(suc.id);
 }
 
@@ -3088,7 +3084,7 @@ function resaltarMarcador(id){
     const pin = el && el.querySelector('.pin');
     if(pin) pin.classList.add('pin--resaltado');
   };
-  if(mapaActivo==='oficial'&&capaCentros?.zoomToShowLayer){capaCentros.zoomToShowLayer(marcador,()=>{if(estado.panelAbiertoId!==id)return;aplicarResaltado();const panel=document.getElementById('panelDetalle');if(globalThis.DoctorSVEnlaces&&panel?.classList.contains('abierto')){const rect=mapa.getContainer().getBoundingClientRect();mapa.panBy(DoctorSVEnlaces.visibleOffset(rect,panel.getBoundingClientRect(),mapa.latLngToContainerPoint(marcador.getLatLng())),{animate:false});}});}else aplicarResaltado();
+  aplicarResaltado();
   // Tras el paneo/zoom, Leaflet puede re-renderizar el marcador; reforzamos
   // el resaltado un instante después por si el elemento cambió.
   setTimeout(aplicarResaltado, 350);
@@ -3697,7 +3693,7 @@ function expandirGrupo(key){
   L.DomEvent.disableClickPropagation(box);L.DomEvent.disableScrollPropagation(box);
   L.popup({maxWidth:390,autoPan:true}).setLatLng(g.marker.getLatLng()).setContent(box).openOn(mapa);
 }
-function cargarMarcadores(){capaCentros=(mapaActivo==='oficial'?DoctorSVAgrupacion.crearCapa(L):L.layerGroup()).addTo(mapa);mapa.on('zoomstart',cerrarGrupo);mapa.on('click',cerrarGrupo);mapa.on('popupclose',()=>{grupoExpandido=null;});document.addEventListener('keydown',e=>{if(e.key==='Escape')cerrarGrupo();});aplicarFiltros();}
+function cargarMarcadores(){capaCentros=L.layerGroup().addTo(mapa);mapa.on('zoomstart',cerrarGrupo);mapa.on('click',cerrarGrupo);mapa.on('popupclose',()=>{grupoExpandido=null;});document.addEventListener('keydown',e=>{if(e.key==='Escape')cerrarGrupo();});aplicarFiltros();}
 function colorGrupo(rows){
   const counts=new Map();for(const s of rows)counts.set(s.tipo,(counts.get(s.tipo)||0)+1);
   if(counts.size===1)return TYPE_META[rows[0].tipo].hex;
@@ -3708,13 +3704,13 @@ function colorGrupo(rows){
 function reconstruirMarcadores(){
   cerrarGrupo();mapa.closePopup();capaCentros.clearLayers();gruposMapa.clear();estado.marcadoresPorId.clear();
   for(const [key,rows] of gruposVisibles(SUCURSALES.filter(sucursalVisible))){
-    if(rows.length===1){const m=hacerMarcador(rows[0]);m._doctorSVCount=1;m.addTo(capaCentros);estado.marcadoresPorId.set(rows[0].id,m);continue;}
+    if(rows.length===1){const m=hacerMarcador(rows[0]).addTo(capaCentros);estado.marcadoresPorId.set(rows[0].id,m);continue;}
     const first=rows.slice().sort((a,b)=>a.id.localeCompare(b.id))[0];
     const label=rows.length+' centros en la misma dirección: '+rows.map(s=>TYPE_META[s.tipo].label+' '+s.nombre).join('; ');
     const marker=L.marker([first.lat,first.lng],{icon:L.divIcon({className:'marcador-grupo',html:'<div class="grupo-pin" style="background:'+colorGrupo(rows)+'" aria-hidden="true"></div>',iconSize:[32,32],iconAnchor:[16,16]}),title:label,alt:label,keyboard:true,bubblingMouseEvents:false});
     marker.on('click',e=>{if(e.originalEvent)L.DomEvent.stop(e.originalEvent);expandirGrupo(key);});
     marker.on('add',()=>{const el=marker.getElement();el.setAttribute('aria-label',label);el.addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();e.stopPropagation();expandirGrupo(key);}});});
-    marker._doctorSVCount=rows.length;gruposMapa.set(key,{rows,marker});marker.addTo(capaCentros);for(const s of rows)estado.marcadoresPorId.set(s.id,marker);
+    gruposMapa.set(key,{rows,marker});marker.addTo(capaCentros);for(const s of rows)estado.marcadoresPorId.set(s.id,marker);
   }
 }
 function actualizarContadores(){
