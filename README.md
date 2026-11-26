@@ -32,3 +32,6 @@ El logo Asclepio fue seleccionado por el responsable del proyecto. Las pruebas s
 El mapa acepta `?centro=farmacia%3AE10F1506&nombre=FARMACIA+EL+CARMEN`. El código y el nombre se contrastan con los registros actuales antes de abrir la ficha y centrar el punto. Las sucursales inactivas se hacen visibles mediante el selector existente. Si una ubicación está pendiente, solo se abre su ficha; no se crean coordenadas.
 
 Los códigos inexistentes, ambiguos o con un nombre distinto muestran un aviso y no abren otra farmacia por aproximación. La vista normal sin parámetros conserva su comportamiento. Pruebas: `node --test`.
+
+
+[Última revisión: ubicaciones y agrupación por zoom, 25/11/2026](REPORTE-UBICACIONES-Y-ZOOM-2026-11-25.md).

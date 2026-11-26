@@ -1,0 +1,720 @@
+{
+  "fecha": "2026-11-25",
+  "centrosRevisados": [
+    {
+      "id": "farmacia:E10F1519",
+      "nombre": "FARMACIA LA BUENA N° 53",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": 13.70128009,
+        "Longitud": -89.22838604,
+        "Distrito": "SAN SALVADOR",
+        "Municipio": "SAN SALVADOR CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.70128009,
+        "Longitud": -89.22838604,
+        "Dirección": "Millenium Plaza, Segundo Nivel Comercial Torre Millenium, Local Milc0216\\N",
+        "Distrito": "SAN SALVADOR",
+        "Municipio": "SAN SALVADOR CENTRO",
+        "Departamento": "SAN SALVADOR"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "ABANK identifica La Buena 53 en Millennium, segundo nivel; el directorio del propio proveedor B053 aún identifica Ciudad Universitaria. Se representa el punto de Millennium declarado por el roll out como referencia de esta ficha RETIRADA. Validar local MILC0216 e historial del código, sin confundirlo con una farmacia vigente.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.aseguradoraabank.com/extended/medics/1630",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://externo.farmacialabuena.com/sucursales/sucursales.php?nsuc=B053",
+          "evidencia": "Consulta actual: B053 indica Ciudad Universitaria, discrepante con la ficha histórica retirada."
+        }
+      ]
+    },
+    {
+      "id": "farmacia:E10F10684",
+      "nombre": "FARMACIA LA BUENA N° 79",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": 13.45074234,
+        "Longitud": -88.16102562,
+        "Distrito": "San Miguel",
+        "Municipio": "SAN MIGUEL CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.45074234,
+        "Longitud": -88.16102562,
+        "Dirección": "Centro Comercial Garden Mall",
+        "Distrito": "San Miguel",
+        "Municipio": "SAN MIGUEL CENTRO",
+        "Departamento": "SAN MIGUEL"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Se representa la coordenada histórica del roll out en Garden Mall para esta ficha RETIRADA. Validar el número de local y el historial del código: el directorio actual B079 corresponde a La Unión y no debe sustituir automáticamente a esta sede de San Miguel.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://externo.farmacialabuena.com/sucursales/sucursales.php?nsuc=B079",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "farmacia:E10F0993",
+      "nombre": "FARMACIAS CRISTAL SANTA MARÍA SAN MIGUEL",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": 13.47939,
+        "Longitud": -88.18269,
+        "Distrito": "San Miguel",
+        "Municipio": "SAN MIGUEL CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.47939,
+        "Longitud": -88.18269,
+        "Dirección": "9A. Avenida Sur No. 108-B, Barrio La Merced, San Miguel Cp 3301",
+        "Distrito": "San Miguel",
+        "Municipio": "SAN MIGUEL CENTRO",
+        "Departamento": "SAN MIGUEL"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "CNR registra Farmacia Santa María en 9a avenida sur 108-B, Barrio La Merced, igual al roll out. La cadena publica Santa María 2 con número 513-A y otro teléfono en el mismo sector. Validar renumeración, teléfono e identidad del código antes de usar esta referencia como puerta confirmada. Se conserva el punto declarado por la red.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cnr.gob.sv/documentos/rc/julio_agosto_2016/Asientos_de_Matricula_de_Empresa_1a_vez_julio_agosto_2016.pdf",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://farmaciacristal.com/index.php/sucursales/",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "farmacia:E10F80774",
+      "nombre": "FARMACIAS LA ESPERANZA TACUBA",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": 13.901447,
+        "Longitud": -89.931528,
+        "Distrito": "Tacuba",
+        "Municipio": "AHUACHAPAN CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.901447,
+        "Longitud": -89.931528,
+        "Dirección": "Avenida Cuscatlán Sur, Entre calle San Juan y 2a Calle Poniente",
+        "Distrito": "Tacuba",
+        "Municipio": "AHUACHAPAN CENTRO",
+        "Departamento": "AHUACHAPAN"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Un comercio vecino identifica Farmacia La Esperanza en la salida a San Juan, Tacuba; respalda la localidad. El punto del roll out se muestra como referencia: validar la entrada en avenida Cuscatlán sur, entre calle San Juan y segunda calle poniente, y el teléfono 2448-1711. No se usa el pin de una farmacia homónima.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.ciberonline.com/ubicacion/index.html",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://www.srs.gob.sv/wp-content/uploads/2022/10/LISTADO-DE-FARMACIAS.pdf",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "farmacia:E10F2991",
+      "nombre": "FARMACIA SAN NICOLAS LA JOYA",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": 13.6561,
+        "Longitud": -89.2789,
+        "Distrito": "LA LIBERTAD",
+        "Municipio": "LA LIBERTAD SUR"
+      },
+      "nuevo": {
+        "Latitud": 13.6561,
+        "Longitud": -89.2789,
+        "Dirección": "Centro Comercial La Joya Market Place, Local N° 6, Ubicado En El Kilometro 12, Carretera Al Puerto De La Libertad",
+        "Distrito": "LA LIBERTAD",
+        "Municipio": "LA LIBERTAD SUR",
+        "Departamento": "LA LIBERTAD"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "El directorio del proveedor y Waze sitúan San Nicolás La Joya en el mismo centro comercial, pero el local vigente es 49 y esta ficha RETIRADA declara local 6. Se representa el inmueble declarado en la hoja como referencia histórica; validar el local anterior y su puerta, sin afirmar que la ficha retirada corresponde a la farmacia vigente.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.farmaciasannicolas.com/sucursales",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://www.waze.com/es/live-map/directions/sv/la-libertad/santa-tecla/farmacia-san-nicolas-%C2%B7-la-joya?to=place.ChIJLzj9WmcuY48Rlr2ngcjGoyw",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "farmacia:E10F3381",
+      "nombre": "FARMACIAS CRISTAL 20",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": 13.559528,
+        "Longitud": -88.431611,
+        "Distrito": "USULUTAN",
+        "Municipio": "USULUTAN NORTE"
+      },
+      "nuevo": {
+        "Latitud": 13.559528,
+        "Longitud": -88.431611,
+        "Dirección": "Primera Calle Poniente y Segunda Avenida sur",
+        "Distrito": "EL TRIUNFO",
+        "Municipio": "USULUTÁN NORTE",
+        "Departamento": "USULUTÁN"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Aeroflash identifica Farmacia Cristal 20 en El Triunfo y publica 77599260, el mismo teléfono del roll out. Esto resuelve la confusión con Cristal 20 Corinto, que tiene otro teléfono. Se corrige distrito a El Triunfo, municipio Usulután Norte, conservando el punto de la hoja en esa localidad como referencia. Validar la esquina/local exacto: las direcciones usan distinta orientación de la segunda avenida.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://aeroflash.online/aeroflashgo/?p=goSucursales",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://farmaciacristal.com/index.php/sucursales/",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:551",
+      "nombre": "CLINICA GUADALUPANA Y LABORATORIO CONCEPCION ESPECIALIDADES",
+      "estado": "INACTIVO TEMPORAL",
+      "anterior": {
+        "Latitud": "13.70563147",
+        "Longitud": "-89.148094",
+        "Distrito": "SOYAPANGO",
+        "Municipio": "SAN SALVADOR ESTE"
+      },
+      "nuevo": {
+        "Latitud": 13.70563147,
+        "Longitud": -89.148094,
+        "Dirección": "Calle Roosevelt número 15, Soyapango.",
+        "Distrito": "SOYAPANGO",
+        "Municipio": "SAN SALVADOR ESTE",
+        "Departamento": "SAN SALVADOR"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Consulta actual CSSP: el registro 551 de laboratorio identifica Concepción sucursal 2 en cuarta avenida norte 29, Soyapango. El roll out declara Roosevelt 15 y comparte punto con otras categorías. Esta ficha se representa sólo como referencia de la red. Validar qué unidad corresponde a 551 y la puerta antes de desplazarse; no se fusiona con imágenes ni atención presencial.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:1792",
+      "nombre": "TEST LAB SUCURSAL COLONIA MEDICA",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": "13.71147075",
+        "Longitud": "-89.20139288",
+        "Distrito": "San Salvador",
+        "Municipio": "SAN SALVADOR CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.71147075,
+        "Longitud": -89.20139288,
+        "Dirección": "23 Calle Poniente Casa no. 1217, Colonia Medica",
+        "Distrito": "San Salvador",
+        "Municipio": "SAN SALVADOR CENTRO",
+        "Departamento": "SAN SALVADOR"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Consulta actual CSSP: Test Lab 1792 está inscrito como sucursal 3 en Santa Rosa, Santa Tecla. El roll out identifica una ficha RETIRADA de Colonia Médica. Se muestra únicamente el punto histórico de la hoja para esa ficha retirada: validar historial de traslado/código y puerta 1217. No se convierte la sede vigente de Santa Rosa en la antigua de Colonia Médica.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:2416",
+      "nombre": "TEST LAB SUCURSAL SANTA ANA",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": "13.98420469",
+        "Longitud": "-89.56217657",
+        "Distrito": "SANTA ANA",
+        "Municipio": "SANTA ANA CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.98420469,
+        "Longitud": -89.56217657,
+        "Dirección": "23 Calle Poniente entre 6 / 8 Avenida Sur #26",
+        "Distrito": "SANTA ANA",
+        "Municipio": "SANTA ANA CENTRO",
+        "Departamento": "SANTA ANA"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Consulta actual CSSP: Testlab 2416, sucursal 5, declara quinta avenida sur entre 25 y 27 calle oriente, número 22. El roll out conserva otra dirección en Santa Ana para una ficha RETIRADA. Se representa su coordenada histórica como referencia; validar el local anterior y el historial del código antes de utilizar el pin como puerta exacta.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:1462",
+      "nombre": "TEST LAB SUCURSAL SAN VICENTE 3",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": "13.702389",
+        "Longitud": "-88.72758191",
+        "Distrito": "SANTA CLARA",
+        "Municipio": "San Vicente Norte"
+      },
+      "nuevo": {
+        "Latitud": 13.702389,
+        "Longitud": -88.72758191,
+        "Dirección": "2a Av. Sur, Barrio el Centro",
+        "Distrito": "SANTA CLARA",
+        "Municipio": "San Vicente Norte",
+        "Departamento": "SAN VICENTE"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "Consulta actual CSSP: Test Lab 1462 consta en segunda calle oriente, Barrio El Centro, casa 9, Santa Clara. La hoja utiliza segunda avenida sur. Se representa el punto de la red en Santa Clara como referencia de la ficha RETIRADA. Validar la esquina y puerta; no se sitúa por el nombre comercial San Vicente 3 en la cabecera departamental.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:537",
+      "nombre": "LABORATORIO CLINICO METAPANECO",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": "14.3275",
+        "Longitud": "-89.4475",
+        "Distrito": "METAPÁN",
+        "Municipio": "SANTA ANA NORTE"
+      },
+      "nuevo": {
+        "Latitud": 14.3275,
+        "Longitud": -89.4475,
+        "Dirección": "8° Av. Sur No.11 Barrio Santa Cruz Callejón El Tamarindo",
+        "Distrito": "METAPÁN",
+        "Municipio": "SANTA ANA NORTE",
+        "Departamento": "SANTA ANA"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "La consulta actual CSSP confirma Laboratorio Metapaneco 537 en Callejón El Tamarindo, Metapán, con referencia a cuarta avenida sur y segunda calle oriente. Un directorio coincide con teléfono 2402-4125. La hoja usa octava avenida sur 11. Se conserva su punto como referencia del sector; validar la nomenclatura y la puerta exacta. La sucursal 1 dentro del hospital es otra sede y no sustituye esta ficha.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.todosbiz.com/SV/laboratorio-cl%C3%ADnico-metapaneco-2402-4125",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://hospitalmetapaneco.com/",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:797",
+      "nombre": "LABORATORIO CLINICO SANTA ELENA SUC #2",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": "13.923",
+        "Longitud": "-89.84614",
+        "Distrito": null,
+        "Municipio": "AHUACHAPAN CENTRO"
+      },
+      "nuevo": {
+        "Latitud": 13.987525349999999,
+        "Longitud": -89.55769405000001,
+        "Dirección": "13a calle Oriente, entre avenida Independencia y 3a avenida Sur, Santa Ana",
+        "Distrito": "SANTA ANA",
+        "Municipio": "SANTA ANA CENTRO",
+        "Departamento": "SANTA ANA"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "CSSP actual identifica inequívocamente Laboratorio Santa Elena sucursal 2, registro 797, en Santa Ana, 13 calle oriente entre avenida Independencia y tercera avenida sur. Se descarta la coordenada de Ahuachapán del roll out. Se representa el punto medio del tramo de calle identificado en OpenStreetMap, exclusivamente como referencia aproximada de dirección. Validar el traslado/historial con el proveedor y la puerta exacta: no es un pin de establecimiento confirmado ni sirve para rutas automáticas.",
+      "fuentes": [
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "797 LABORATORIO CLINICO SANTA ELENA SUCURSAL 2: Trece calle Oriente, entre Avenida Independencia y Tercera Avenida Sur; Santa Ana."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/409898272",
+          "evidencia": "Tramo entre avenida Independencia y 3a avenida sur. Punto medio de nodos 429262537 y 429655795. OSM rotula la vía Poniente; CSSP Oriente: no se certifica nomenclatura ni puerta."
+        }
+      ]
+    },
+    {
+      "id": "laboratorio:2282",
+      "nombre": "LABORATORIO CLINICO MINERO R MIRAMAR SUCURSAL #5",
+      "estado": "INACTIVO TEMPORAL",
+      "anterior": {
+        "Latitud": "13.51221398",
+        "Longitud": "-88.8921196",
+        "Distrito": "SAN JUAN NONUALCO",
+        "Municipio": "LA PAZ ESTE"
+      },
+      "nuevo": {
+        "Latitud": 13.51221398,
+        "Longitud": -88.8921196,
+        "Dirección": "Residencial Miramar 2 Sam Calle Poligono 1724 San Juan Nonualco La Paz Este",
+        "Distrito": "SAN JUAN NONUALCO",
+        "Municipio": "LA PAZ ESTE",
+        "Departamento": "LA PAZ"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "La consulta actual CSSP ya confirma Minero R sucursal 5 en Residencial Miramar 2, San Juan Nonualco, La Paz Este. Esto supera el antiguo conflicto con Escalón. Se muestra la coordenada de la hoja como referencia de esa sede; validar puerta y numeración del polígono: CSSP indica 1734 y la hoja 1724. Se conserva INACTIVO TEMPORAL.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://cssp.gob.sv/wp-content/uploads/2021/03/Todos-los-autorizados-para-pruebas-de-antigenos-para-covid-19-28-05-2021.pdf",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "imagen:59",
+      "nombre": "PRORAD IMAGENES PUERTO DE LA LIBERTAD",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": "13.48766846",
+        "Longitud": "-89.31278646",
+        "Distrito": "La Libertad",
+        "Municipio": "LA LIBERTAD COSTA"
+      },
+      "nuevo": {
+        "Latitud": 13.4879,
+        "Longitud": -89.3474879,
+        "Dirección": "Centro comercial the point local #3A Puerto La Libertad, La Libertad.",
+        "Distrito": "La Libertad",
+        "Municipio": "LA LIBERTAD COSTA",
+        "Departamento": "LA LIBERTAD"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "La hoja y la publicación de PRORAD identifican el traslado a The Point, local 3A. Se descarta el punto antiguo del Puerto de La Libertad y se utiliza como referencia el inmueble The Point, localizado mediante el enlace cartográfico publicado por The Coffee Cup dentro del mismo centro comercial. Validar entrada exacta del local 3A y que la nueva unidad ya esté atendiendo; no es una confirmación de puerta ni de apertura.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.findhealthclinics.org/SV/Puerto-la-Libertad/112037235135506/Puerto-de-La-Libertad-Prorad",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://www.thecoffeecup.com.sv/frontend/sucursales.php",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        },
+        {
+          "url": "https://maps.app.goo.gl/1dn6vAWWFs2jX5FQA",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "imagen:421A",
+      "nombre": "CLINICA GUADALUPANA Y LABORATORIO CONCEPCION ROOSEVELT - IMÁGENES",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": 13.70563147,
+        "Longitud": -89.148094,
+        "Distrito": "Soyapango",
+        "Municipio": "SAN SALVADOR ESTE"
+      },
+      "nuevo": {
+        "Latitud": 13.70563147,
+        "Longitud": -89.148094,
+        "Dirección": "4 Avenida Norte Número 29, Soyapango.\"",
+        "Distrito": "Soyapango",
+        "Municipio": "SAN SALVADOR ESTE",
+        "Departamento": "SAN SALVADOR"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "La consulta actual CSSP muestra que el código 421 de laboratorio corresponde a Roosevelt Oriente 24; no identifica específicamente la unidad de imágenes 421A. La hoja declara cuarta avenida norte 29 y comparte coordenada con otras unidades. Se muestra su punto únicamente como referencia; validar qué local y habilitación de imágenes corresponden a 421A.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "imagen:1229",
+      "nombre": "CLINICA CLIDESSA DE ULTRASONOGRAFIA CLINICA",
+      "estado": "RETIRADO",
+      "anterior": {
+        "Latitud": 13.9925532,
+        "Longitud": -89.55248743,
+        "Distrito": "Santa Ana",
+        "Municipio": "Santa Ana Centro"
+      },
+      "nuevo": {
+        "Latitud": 13.9925532,
+        "Longitud": -89.55248743,
+        "Dirección": "13 Avenida Sur Y 1A. Y 3A. Calle Oriente, A Un Costado Del Hospital San juan de Dios",
+        "Distrito": "Santa Ana",
+        "Municipio": "Santa Ana Centro",
+        "Departamento": "SANTA ANA"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "La consulta actual CSSP identifica la clínica de ultrasonografía 1229 en trece avenida sur con trece calle oriente, número 6; el roll out usa primera/tercera calle oriente y conserva RETIRADO. Se representa sólo la coordenada histórica de la ficha como referencia. Validar el local anterior y la identidad antes de tomar este pin como puerta exacta; no se utiliza una clínica dental homónima.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    },
+    {
+      "id": "atencion:551AP",
+      "nombre": "CLINICA GUADALUPANA Y LABORATORIO CONCEPCION ESPECIALIDADES AP",
+      "estado": "ACTIVO",
+      "anterior": {
+        "Latitud": 13.70563147,
+        "Longitud": -89.148094,
+        "Distrito": "SOYAPANGO",
+        "Municipio": "SAN SALVADOR ESTE"
+      },
+      "nuevo": {
+        "Latitud": 13.70563147,
+        "Longitud": -89.148094,
+        "Dirección": "Calle Roosevelt número 15, Soyapango.",
+        "Distrito": "SOYAPANGO",
+        "Municipio": "SAN SALVADOR ESTE",
+        "Departamento": "SAN SALVADOR"
+      },
+      "decision": "Ubicación de referencia; validación individual pendiente",
+      "motivo": "CSSP actual confirma que el registro 551 del laboratorio está en cuarta avenida norte 29; no identifica por sí solo la atención presencial 551AP. La hoja declara Roosevelt 15. Se representa la coordenada de la red sólo como referencia de atención presencial. Validar qué local corresponde a esta categoría y su puerta; no se copia una habilitación de otra categoría.",
+      "fuentes": [
+        {
+          "url": "https://docs.google.com/spreadsheets/d/10Ko3nX_pYL2DHlkLcBniA7ugsgY9HCOv/edit?gid=1558926714",
+          "evidencia": "Declaración de la red consultada de nuevo el 25/11/2026."
+        },
+        {
+          "url": "https://www.cssp.gob.sv/establecimientos/faces/lista.xhtml",
+          "evidencia": "Fuente consultada para contrastar identidad, localidad o antecedente; el alcance se explica en el motivo."
+        }
+      ]
+    }
+  ],
+  "resumen": {
+    "total": 1193,
+    "estados": {
+      "RETIRADO": 70,
+      "ACTIVO": 984,
+      "INACTIVO TEMPORAL": 110,
+      "INACTIVO": 29
+    },
+    "activosUbicados": 984,
+    "activosPendientes": 0,
+    "pendientes": 0,
+    "referencias": 53,
+    "activosReferencia": 38
+  },
+  "consultasCSSPActuales": {
+    "421": [
+      [
+        "421",
+        "LABORATORIO CLÍNICO CONCEPCIÓN",
+        "CALLE ROOSEVELT ORIENTE, NÚMERO VEINTICUATRO, DISRITO DE SOYAPANGO,",
+        "SAN SALVADOR",
+        "NUEVO",
+        "",
+        "ESTE",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "537": [
+      [
+        "537",
+        "LABORATORIO CLINICO METAPANECO",
+        "4ª AVENIDA SUR, 2ª CALLE ORIENTE, CALLEJON EL TAMARINDO, METAPAN, DPTO. DE SANTA ANA",
+        "SANTA ANA",
+        "NUEVO",
+        "",
+        "NORTE",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "551": [
+      [
+        "551",
+        "LABORATORIO CLINICO CONCEPCION SUC.2",
+        "4A. AVENIDA NORTE #29",
+        "SAN SALVADOR",
+        "ANTIGUO",
+        "SOYAPANGO",
+        "NORTE",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "797": [
+      [
+        "797",
+        "LABORATORIO CLINICO SANTA ELENA SUCURSAL 2",
+        "Trece calle Oriente, entre Avenida Independencia y Tercera Avenida Sur",
+        "SANTA ANA",
+        "NUEVO",
+        "",
+        "CENTRO",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "1229": [
+      [
+        "1229",
+        "CLÍNICA DE ULTRASONOGRAFÍA",
+        "TRECE AVENIDA SUR ENTRE TRECE CALLE ORIENTE NÚMERO SEIS, MUNICIPIO Y DEPARTAMENTO DE SANTA ANA",
+        "SANTA ANA",
+        "ANTIGUO",
+        "SANTA ANA",
+        "",
+        "CONSULTORIOS MEDICOS",
+        "Insolvente"
+      ]
+    ],
+    "1462": [
+      [
+        "1462",
+        "LABORATORIO CLINICO TEST LAB",
+        "2A. CALLE ORIENTE, BARRIO EL CENTRO, CASA #9, SANTA CLARA",
+        "SAN VICENTE",
+        "ANTIGUO",
+        "APASTEPEQUE",
+        "NORTE",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "1792": [
+      [
+        "1792",
+        "LABORATORIO CLINICO TEST LAB SUCURSAL 3",
+        "BOULEVARD MONSEÑOR ROMERO, PROLONGACION 9A. CALLE PONIENTE Y CALLE REAL, CENTRO COMERCIAL SANTA ROSA, LOCAL 45 Y 46,",
+        "LA LIBERTAD",
+        "ANTIGUO",
+        "SANTA TECLA",
+        "NORTE",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "2282": [
+      [
+        "2282",
+        "LABORATORIO CLÍNICO MINERO R SUCURSAL N° 5",
+        "RESIDENCIAL MIRAMAR 2, CALLE POLIGONO 1734, SAN JUAN NONUALCO, MINICIPIO DE LA PAZ ESTE DEPARTAMETNO DE LA PAZ",
+        "LA PAZ",
+        "NUEVO",
+        "",
+        "ESTE",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ],
+    "2416": [
+      [
+        "2416",
+        "LABORATORIO CLÍNICO TESTLAB SUCURSAL 5",
+        "5° AVENIDA SUR ENTRE 25  Y 27 CALLE ORIENTE LOTIFICACION SAN MIGUELITO NUMERO 22 DEPARTAMENTO DE SANTA ANA",
+        "SANTA ANA",
+        "ANTIGUO",
+        "SANTA ANA",
+        "",
+        "LAB. CLINICOS",
+        "Solvente"
+      ]
+    ]
+  },
+  "verificacion": {
+    "centrosRepresentados": 1193,
+    "activosEnMapa": 984,
+    "referenciasPorValidar": 53,
+    "sinPin": 0,
+    "farmaciasEnAtlas": 446,
+    "estadosYServicios": "Sin cambios en esta revisión; se conservan altas y cambios del roll out de la actualización anterior.",
+    "agrupacion": "Por proximidad visual y zoom, sin fusionar identidades ni direcciones. Los contadores de grupos suman centros, no sólo iconos.",
+    "navegador": {
+      "gruposNacionales": 22,
+      "centrosActivosRepresentados": 984,
+      "ejemploMismoSector": {
+        "marcadoresBase": 52,
+        "gruposZoom11": 1,
+        "gruposOIndividualesZoom16": 33
+      }
+    },
+    "pruebasDoctorSV": 33,
+    "pruebasAtlas": 20,
+    "datosReservados": "Catálogos cifrados, contraseñas y demostración conservados."
+  },
+  "limites": "Representación completa no equivale a validación completa: 53 ubicaciones siguen siendo referencias, algunas con conflicto de domicilio o historia de código. Las referencias se indican sólo dentro de la ficha, con detalles cerrados por defecto, y no se utilizan como destino en rutas automáticas o manuales del mapa oficial. El registro regulatorio no aporta una coordenada de puerta para cada caso. Se distinguen coordenadas de hoja, puntos de inmueble y tramo de dirección.",
+  "actualizacionHtml": "2026-11-26"
+}
